@@ -35,7 +35,7 @@ A Spring boot service is defined as a class file that includes the `@Service` an
 ### Controller
 The Spring boot framework is used to make the enterprise application which can be based on Groovy, Java, and Kotlin. By the use of this, we can make a web application; in order to have communication between the front and the backend, we require controllers in our applications; these controllers are responsible for handling the request from the client and providing them with the response in return.
 
-The `@RestController` annotation is mainly used to mark the controller as a basic API endpoint used to access a service (REST API).
+The `@RestController` annotation is mainly used to mark the controller as a basic API endpoint used to access a service. This is what we call a REST API.
 
 ### Model
 Model is an essential part of **MVC (Model-View-Controller) pattern** which is widely used in Spring. A Model is a holder of the context data (obtained from the database) passed by a Controller to be displayed on a View.
