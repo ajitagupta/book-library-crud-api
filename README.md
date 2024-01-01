@@ -15,6 +15,8 @@ In this bootcamp we build a Book / Library API from the ground up. For this need
 
 Each of them depend on each other, and is mandatory to make the applications run. They can be downloaded and should be opened in an IDE like [Spring Tool Suite 4](https://spring.io/tools/). Additionally, we also use Postman for testing our API's, which is [freely available online](https://www.postman.com/downloads/).
 
+These projects were created using [Spring Initialzr](https://start.spring.io/).
+
 ## 1. Config Client
 Spring Boot makes the development of Spring applications faster and easier. Let's analyze our first project *or* microservice (which is simply a small service doing something).
 
@@ -26,13 +28,14 @@ This Spring Boot project `Config Client` is written as a Maven project with gene
 
 Now, let's have a look at some more unwieldy terms to support our API, which simply contains **CRUD (Create, Read, Update, Delete) operations** for the Book and Library class.
 
-### Controller
-Spring boot framework is used to make the enterprise application which can be based on Groovy, Java, and Kotlin. By the use of this, we can make a web application; in order to have communication between the front and the backend, we require controllers in our applications; these controllers are responsible for handling the request from the client and providing them with the response in return.
-
-The `@RestController` annotation is mainly used to mark the controller.
 
 ### Service
 A Spring boot service is defined as a class file that includes the `@Service` annotation and allows developers to add business functionalities *or* business *logic*. The annotation is used with the classes that provide these business functionalities.
+
+### Controller
+The Spring boot framework is used to make the enterprise application which can be based on Groovy, Java, and Kotlin. By the use of this, we can make a web application; in order to have communication between the front and the backend, we require controllers in our applications; these controllers are responsible for handling the request from the client and providing them with the response in return.
+
+The `@RestController` annotation is mainly used to mark the controller as a basic API endpoint used to access a service (REST API).
 
 ### Model
 Model is an essential part of **MVC (Model-View-Controller) pattern** which is widely used in Spring. A Model is a holder of the context data (obtained from the database) passed by a Controller to be displayed on a View.
