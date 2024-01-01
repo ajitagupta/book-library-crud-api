@@ -29,7 +29,7 @@ Now, let's have a look at some more unwieldy terms.
 ### Controller
 Spring boot framework is used to make the enterprise application which can be based on Groovy, Java, and Kotlin. By the use of this, we can make a web application; in order to have communication between the front and the backend, we require controllers in our applications; these controllers are responsible for handling the request from the client and providing them with the response in return.
 
-`@Component` annotation provides annotation based injection with the configuration being Java-based. Thus, having the annotation-based injection reduces the declaration of the bean as a `<bean>` tag. Apart from `@Service`, which is mainly used in the service layer, `@Controller` is mainly used for the presentation or View layer.
+The `@RestController` annotation is mainly used to mark the controller.
 
 ### Service
 A Spring boot service is defined as a class file that includes the `@Service` annotation and allows developers to add business functionalities *or* business *logic*. The annotation is used with the classes that provide these business functionalities.
