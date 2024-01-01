@@ -24,7 +24,7 @@ Spring Boot is, like Spring, also based on **Inversion of Control (IoC)**, which
 
 This Spring Boot project `Config Client` is written as a Maven project with general Maven dependencies for JPA, databases, testing and Web (server). Here, you will learn what dependencies are needed. Next, we make the project visible with the server-port defined as `8888` in `application.properties`, as well as `default-zone` server URL set to `/eureka` and its internal access name set to `client`, and also include the cloud-client and cloud-eureka dependencies. This outsources the code like in the cloud and makes it visible only through a Eureka server. An Eureka server is a centralized registry that knows all client applications running on each port and IP address. Each microservice has to register to it.
 
-Now, let's have a look at some more unwieldy terms to support our API, which simply contains CRUD (Create, Read, Update, Delete) operations for the Book and Library class.
+Now, let's have a look at some more unwieldy terms to support our API, which simply contains **CRUD (Create, Read, Update, Delete) operations** for the Book and Library class.
 
 ### Controller
 Spring boot framework is used to make the enterprise application which can be based on Groovy, Java, and Kotlin. By the use of this, we can make a web application; in order to have communication between the front and the backend, we require controllers in our applications; these controllers are responsible for handling the request from the client and providing them with the response in return.
@@ -35,7 +35,7 @@ The `@RestController` annotation is mainly used to mark the controller.
 A Spring boot service is defined as a class file that includes the `@Service` annotation and allows developers to add business functionalities *or* business *logic*. The annotation is used with the classes that provide these business functionalities.
 
 ### Model
-Model is an essential part of MVC (Model-View-Controller) pattern which is widely used in Spring. A Model is a holder of the context data (obtained from the database) passed by a Controller to be displayed on a View.
+Model is an essential part of **MVC (Model-View-Controller) pattern** which is widely used in Spring. A Model is a holder of the context data (obtained from the database) passed by a Controller to be displayed on a View.
 ### View
 All MVC frameworks for web applications provide a way to address views. Spring provides view resolvers, which enable you to render models in a browser without tying you to a specific view technology. All controllers in the Spring Web MVC framework return a `ModelAndView` instance. Views in Spring are addressed by a view name and are resolved by a view resolver. 
 
