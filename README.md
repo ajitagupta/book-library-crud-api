@@ -37,10 +37,10 @@ A Spring boot service is defined as a class file that includes the `@Service` an
 ### Model
 Model is an essential part of MVC (Model-View-Controller) pattern which is widely used in Spring. A Model is a holder of the context data (obtained from the database) passed by a Controller to be displayed on a View.
 ### View
-All MVC frameworks for web applications provide a way to address views. Spring provides view resolvers, which enable you to render models in a browser without tying you to a specific view technology. All controllers in the Spring Web MVC framework return a ModelAndView instance. Views in Spring are addressed by a view name and are resolved by a view resolver. 
+All MVC frameworks for web applications provide a way to address views. Spring provides view resolvers, which enable you to render models in a browser without tying you to a specific view technology. All controllers in the Spring Web MVC framework return a `ModelAndView` instance. Views in Spring are addressed by a view name and are resolved by a view resolver. 
 
 ### Repository
-For each of the model entities in the application, we define a repository interface. A repository includes all the methods such as sorting, paginating data and CRUD (Create, Read, Update, Delete) operations. For specifying that the underlying interface is a repository, a marker annotation @Repository is used.
+For each of the model entities in the application, we define a repository interface. A repository includes all the methods such as sorting, paginating data and CRUD (Create, Read, Update, Delete) operations. For specifying that the underlying interface is a repository, a marker annotation `@Repository` is used.
 
 
 
