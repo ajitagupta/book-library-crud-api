@@ -48,7 +48,7 @@ package.
 
 For each of the model entities in the application, we define a repository interface. The repository `JPARepository` includes all the methods such as sorting, paginating data and CRUD operations, making it a very convenient solution. One can thus implement this interface with an underlying interface. For specifying that the underlying interface is a repository, a marker annotation `@Repository` is used.
 
-### Microservice three-tier approach, layering
+### Microservice
 We have learnt to write a well-designed, layered Spring Boot application where we used a three-tier approach: model, application, presentation, and data. This is a well-known pattern for its benefits related to loose coupling and clear separation of responsibilities. But there is still much more to learn: once you get several of these applications, how are they going to connect to each other? How do they see each other’s instances if they start
 to scale up? It's time to move to microservices.
 
