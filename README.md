@@ -6,7 +6,7 @@ The purpose of this bootcamp is to fill all knowledge gaps and take a deep dive 
 
 As a software engineer, in most projects you work on, Spring and Spring Boot are already implemented and used vigorously. So, you must have used a bit of Spring Boot yourself and extended the API. However, getting to know its essential functionality and setup is crucial in this age of flexible and scalable enterprise projects. Everyone wants it. Everyone needs it. Everyone is switching to this technology. Hence, a bootcamp becomes mandatory to grow in your career and get a good job.
 
-In this bootcamp we build a Book / Library API from the ground up. For this need, we create five Spring Boot projects:
+In this bootcamp we build a Book / Library CRUD API from the ground up according to microservice architecture. To this end, we create five Spring Boot projects:
 1. Config Client
 2. Config Server
 3. Feign Consumer
