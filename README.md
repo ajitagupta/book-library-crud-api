@@ -20,7 +20,7 @@ These projects were created using [Spring Initialzr](https://start.spring.io/).
 ## 1. Config Client
 Spring Boot makes the development of Spring applications faster and easier. Let's analyze our first project *or* microservice (which is simply a small service doing something).
 
-Spring Boot uses additional annotations. This includes `ComponentScan` to extend the packages to be searched for beans. For RESTful services, it uses the `RestController` annotation along with subordinate annotations like Get-/Post-/Put-/DeleteMapping to make it possible to handle different RESTful service requests. Further, Spring uses Aspect-Oriented Programming (AOP) to separate individual concerns in different programming packages: one for model, controller, service, respositories, exception, and response. 
+Spring Boot uses additional annotations. This includes `ComponentScan` to extend the packages to be searched for beans. For RESTful services, it uses the `RestController` annotation along with subordinate annotations like `Get-/Post-/Put-/DeleteMapping` to make it possible to handle different RESTful service requests. Further, Spring uses **Aspect-Oriented Programming (AOP)** to separate individual concerns in different packages: one for model, controller, service, respositories, exceptions, and response. 
 
 Spring Boot is, like Spring, also based on **Inversion of Control (IoC)**, which is the delegation of creating objects and managing dependencies to a container and the idea behind a framework. It can also make use of annotation-based, setter-based or constructor-based **Dependency Injection (DI)**, where the goal is to create, initialize and wire a Java (or bean) objects defined in application classes and configurations, without the new keyword, and make them available to other components in the application.
 
@@ -43,7 +43,7 @@ Model is an essential part of **MVC (Model-View-Controller) pattern** which is w
 All MVC frameworks for web applications provide a way to address views. Spring provides view resolvers, which enable you to render models in a browser without tying you to a specific view technology. All controllers in the Spring Web MVC framework return a `ModelAndView` instance. Views in Spring are addressed by a view name and are resolved by a view resolver. 
 
 ### Repository
-For each of the model entities in the application, we define a repository interface. A repository includes all the methods such as sorting, paginating data and CRUD operations. For specifying that the underlying interface is a repository, a marker annotation `@Repository` is used.
+For each of the model entities in the application, we define a repository interface. The repository `JPARepository` includes all the methods such as sorting, paginating data and CRUD operations. One can thus implement this interface with an underlying interface. For specifying that the underlying interface is a repository, a marker annotation `@Repository` is used.
 
 
 
