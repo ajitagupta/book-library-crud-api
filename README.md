@@ -53,7 +53,18 @@ We run the application by specifying a portnumber (e.g. `8080`) in `application.
 
 We started with a monolith. We have learnt to write a well-designed, layered Spring Boot application where we used a three-tier approach: model, application, presentation, and data. This is a well-known pattern for its benefits related to loose coupling and clear separation of responsibilities. Now, we split up the functionality. Once we get several of these applications, how are they going to connect to each other? How do they see each other's instances if they start to scale up? It's time to move to microservices.
 
-This Spring Boot project `Config Server` is written as a Maven project with general Maven dependencies for JPA, databases, testing and Web (server). Here, you will learn what dependencies are needed. Next, we make the project visible with the server-port defined as `8888` in `application.properties`, as well as `defaultZone` server URL set to `/eureka` under port `8761` and its internal application name set to `client`, and also include the cloud-client and cloud-eureka dependencies. This outsources the code like in the cloud and makes it visible only through a Eureka server. An Eureka server is a centralized registry that knows all client applications running on each port and IP address. Each microservice has to register to it.
+This Spring Boot project `Config Server` is written as a Maven project with general Maven dependencies for JPA, databases, testing and Web (server). Here, you will learn what dependencies are needed. Next, we make the project visible with the server-port defined as `8888` in `application.properties`, as well as `defaultZone` server URL set to `/eureka` under port `8761`. **Service Registry** (a new microservice!) maps the internal application name set to `client`. A *Registry Client* then translates these aliases to specific URL's, e.g. http://client/ to `http://localhost:8080` for our running Config Client. This outsources the code like in the cloud and makes it visible only through a Eureka server. An Eureka server is a centralized registry that knows all client applications running on each port and IP address. Each microservice has to register to it.
 
 Spring Cloud Config Server provides an HTTP resource-based API for external configuration (name-value pairs or equivalent YAML content). The server is embeddable in a Spring Boot application, by using the @EnableConfigServer annotation. Consequently, the following application is a config server:
 
+## 5. Eureka Server
+
+Eureka is a service discovery tool supported by Spring. It enables loose coupling, i.e. two microservices don't have to talk to each other, e.g. to share under which IP and port they are available.
+
+### Load Balancing
+
+If we spin up two instances of a microservice, they will both register in Eureka with the same alias (since they have the same application name). Let's say we have our new instance located at http://localhost:8082. When the first microservice, as a client, wants to contact http://client/, Eureka will return both URL's and it's up to the consumer to decide which instance should be called (using Ribbon—the load balancer—together with Eureka's registry client). By default, Ribbon would apply a simple Round-Robin strategy.[
+
+## References
+- [YouTube Playlist by Telusko](https://www.youtube.com/watch?v=3WqDbU_Xnu4&list=PLsyeobzWxl7rRyGcqgZ3MP5pWGPwUvprI)
+- [Learning Microservices with Spring Boot](https://www.amazon.com/Learn-Microservices-Spring-Boot-Containerization/dp/1484261305/ref=sr_1_1?crid=9U8WG19NS9E7&keywords=learning+microservices+with+spring+boot&qid=1704288545&sprefix=learning+microservi%2Caps%2C211&sr=8-1)
