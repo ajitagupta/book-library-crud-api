@@ -6,7 +6,7 @@ The purpose of this bootcamp is to fill all knowledge gaps and take a deep dive 
 
 As a software engineer, in most projects you work on, Spring and Spring Boot are already implemented and used vigorously. So, you must have used a bit of Spring Boot yourself and extended the API. However, getting to know its essential functionality and setup is crucial in this age of flexible, highly available distributed systems, and scalable enterprise projects. Everyone wants it. Everyone needs it. Everyone is switching to this technology. Hence, a bootcamp becomes mandatory to grow in your career and get a good job.
 
-In this bootcamp we build a Book / Library CRUD API from the ground up. We will also use the Spring Cloud framework build a distributed system with a microservice architecture. We create five Spring Boot projects:
+In this bootcamp we build a Book / Library CRUD API from the ground up. We will also use the Spring Cloud framework to build a distributed system with a microservice architecture. We create five Spring Boot projects:
 1. Config Client
 2. Config Server
 3. Feign Consumer
@@ -41,7 +41,7 @@ Model is an essential part of **MVC (Model-View-Controller) pattern** which is w
 All MVC frameworks for web applications provide a way to address views. Spring provides view resolvers, which enable you to render models in a browser without tying you to a specific view technology. All controllers in the Spring Web MVC framework return a `ModelAndView` instance. Views in Spring are addressed by a view name and are resolved by a view resolver. 
 
 ### Repository
-Now that we have our model designed, we can create our JPA repositories so we can store and read our Java objects. Following our packaging structure and the layered application pattern, we'll create repositories in a new repository
+Now that we have our model designed, we can create our JPA repositories (alert: you must be familiar with basic database concepts and the JPA framework to be able to follow) so we can store and read our Java objects. Following our packaging structure and the layered application pattern, we'll create repositories in a new repository
 package.
 
 For each of the model entities in the application, we define a repository interface. The repository `JPARepository` includes all the methods such as sorting, paginating data and CRUD operations, making it a very convenient solution that is available under Spring JPA. One can thus implement this interface with an underlying interface. For specifying that the underlying interface is a repository, a marker annotation `@Repository` is used.
