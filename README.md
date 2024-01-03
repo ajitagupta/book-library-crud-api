@@ -4,7 +4,7 @@
 
 The purpose of this bootcamp is to fill all knowledge gaps and take a deep dive into Spring Boot.
 
-As a software engineer, in most projects you work on, Spring and Spring Boot are already implemented and used vigorously. So, you must have used a bit of Spring Boot yourself and extended the API. However, getting to know its essential functionality and setup is crucial in this age of flexible, highly available, and scalable enterprise projects. Everyone wants it. Everyone needs it. Everyone is switching to this technology. Hence, a bootcamp becomes mandatory to grow in your career and get a good job.
+As a software engineer, in most projects you work on, Spring and Spring Boot are already implemented and used vigorously. So, you must have used a bit of Spring Boot yourself and extended the API. However, getting to know its essential functionality and setup is crucial in this age of flexible, highly available distributed systems, and scalable enterprise projects. Everyone wants it. Everyone needs it. Everyone is switching to this technology. Hence, a bootcamp becomes mandatory to grow in your career and get a good job.
 
 In this bootcamp we build a Book / Library CRUD API from the ground up according to Spring Boot microservice architecture. To this end, we create five Spring Boot projects:
 1. Config Client
@@ -49,7 +49,6 @@ package.
 For each of the model entities in the application, we define a repository interface. The repository `JPARepository` includes all the methods such as sorting, paginating data and CRUD operations, making it a very convenient solution. One can thus implement this interface with an underlying interface. For specifying that the underlying interface is a repository, a marker annotation `@Repository` is used.
 
 ### Microservice
-We have learnt to write a well-designed, layered Spring Boot application where we used a three-tier approach: model, application, presentation, and data. This is a well-known pattern for its benefits related to loose coupling and clear separation of responsibilities. But there is still much more to learn: once you get several of these applications, how are they going to connect to each other? How do they see each other’s instances if they start
-to scale up? It's time to move to microservices.
+We have learnt to write a well-designed, layered Spring Boot application where we used a three-tier approach: model, application, presentation, and data. This is a well-known pattern for its benefits related to loose coupling and clear separation of responsibilities - we split up the functionality. But there is still much more to learn: once you get several of these applications, how are they going to connect to each other? How do they see each other’s instances if they start to scale up? It's time to move to microservices.
 
 
