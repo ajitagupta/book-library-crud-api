@@ -46,11 +46,11 @@ package.
 
 For each of the model entities in the application, we define a repository interface. The repository `JPARepository` includes all the methods such as sorting, paginating data and CRUD operations, making it a very convenient solution. One can thus implement this interface with an underlying interface. For specifying that the underlying interface is a repository, a marker annotation `@Repository` is used.
 
-### Microservice
+We run the application by specifying a portnumber (e.g. `8080`) in `application.properties`. Our application can be accessed in the browser under `http://localhost:portnumber`.
+
+## 2. Config Server (Microservice: from monolith to microservice)
+
 We started with a monolith. We have learnt to write a well-designed, layered Spring Boot application where we used a three-tier approach: model, application, presentation, and data. This is a well-known pattern for its benefits related to loose coupling and clear separation of responsibilities. Now, we split up the functionality. Once we get several of these applications, how are they going to connect to each other? How do they see each other's instances if they start to scale up? It's time to move to microservices.
-
-
-## 2. Config Server (from monolith to microservice)
 
 This Spring Boot project `Config Client` is written as a Maven project with general Maven dependencies for JPA, databases, testing and Web (server). Here, you will learn what dependencies are needed. Next, we make the project visible with the server-port defined as `8888` in `application.properties`, as well as `defaultZone` server URL set to `/eureka` under port `8761` and its internal application name set to `client`, and also include the cloud-client and cloud-eureka dependencies. This outsources the code like in the cloud and makes it visible only through a Eureka server. An Eureka server is a centralized registry that knows all client applications running on each port and IP address. Each microservice has to register to it.
 
