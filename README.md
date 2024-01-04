@@ -80,6 +80,7 @@ If we spin up two instances of a microservice, they will both register in Eureka
 
 ## Screenshots
 
+// Eureka
 // Postman
 
 
