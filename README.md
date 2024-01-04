@@ -54,9 +54,17 @@ We run the application by specifying a portnumber (e.g. `8080`) in `application.
 
 ## 2. Config Server (Microservice: from monolith to microservice)
 
-We started with a monolith. We have learnt to write a well-designed, layered Spring Boot application where we used a three-tier approach: model, application, presentation, and data. This is a well-known pattern for its benefits related to loose coupling and clear separation of responsibilities. Now, we split up the functionality. Once we get several of these applications, how are they going to connect to each other? How do they see each other's instances if they start to scale up? It's time to move to microservices.
+### Configuration
+Configuration is the process of specifying and loading external values to the software application statically or dynamically. One such example is the database config which we typically provide in the property file and use different values for different environments like Dev, QA, and Production.
 
-This Spring Boot project `Config Server` is written as a Maven project with general Maven dependencies for JPA, databases, testing and Web (server). Here, you will learn what dependencies are needed. Next, we make the project visible with the server-port defined as `8888` in `application.properties`, as well as `defaultZone` server URL set to `/eureka` under port `8761`. **Service Registry** (a new microservice!) maps the internal application name set to `client`. A *Registry Client* then translates these aliases to specific URL's, e.g. http://client/ to `http://localhost:8080` for our running Config Client. This outsources the code like in the cloud and makes it visible only through a Eureka server. An Eureka server is a centralized registry that knows all client applications running on each port and IP address. Each microservice has to register to it.
+In a monolith architecture, there is a single application server running and we traditionally store the application configuration in the environment or application level. Since all the modules of the application are running on a single server it was easy to handle the config in a single place. Microservices architecture is a distributed system architecture where there are a lot of independent services running and it is very challenging to maintain the config with the dynamic growth of the application instances based on demand. Moreover, each microservice needs different configurations for different environments like Dev, QA, UAT, and Prod.
+
+## Configuration Server
+The solution to these problems is externalizing the microservices configuration to an external location to handle it from a single place using a dedicated microservice called Configuration Server. Then each microservices in the system is a Config Client that gets the location of the Config Server from the Discovery server or Service registry during application startup.
+The centralized configuration works using a typical client-server architecture pattern. There is a dedicated microservices application called Config Server which has access to the Configuration store like a git repository.
+Hence, the names Config Server and Config Client.
+
+**Service Registry** (a new microservice!) maps the internal application name set to `client`. A *Registry Client* then translates these aliases to specific URL's, e.g. http://client/ to `http://localhost:8080` for our running Config Client. This outsources the code like in the cloud and makes it visible only through a Eureka server. An Eureka server is a centralized registry that knows all client applications running on each port and IP address. Each microservice has to register to it.
 
 Spring Cloud Config Server provides an HTTP resource-based API for external configuration (name-value pairs or equivalent YAML content). The server is embeddable in a Spring Boot application, by using the @EnableConfigServer annotation. Consequently, the following application is a config server:
 
