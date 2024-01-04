@@ -69,6 +69,9 @@ Since Feign uses standard Java interfaces, it's also easy to mock them during un
 
 ## 4. RestTemplate Consumer
 
+Spring RestTemplate class is part of Spring Web, introduced in Spring 3. RestTemplate class provides overloaded methods for different HTTP methods, such as GET, POST, PUT, DELETE etc.
+
+RestTemplate offers developers a high degree of flexibility and control over HTTP requests, which is advantageous in intricate scenarios.
 
 ## 5. Eureka Server
 
