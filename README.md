@@ -59,7 +59,7 @@ Spring Cloud Config Server provides an HTTP resource-based API for external conf
 
 ## 3. Feign Consumer
 
-The Feign Consumer is a special type of consumer in the sense that there is need to write any implementation to call the RESTful services. 
+The Feign Consumer is a special type of consumer in the sense that there is need to write any implementation to call the RESTful services. This is called a *declarative* approach.
 
 Feign allows you to abstract the mechanics of calling a REST service. Once you configure and annotate the Feign interface, you can call a REST service by making a simple Java function call. The actual implementation of making a REST call is handled at runtime by Feign. This means that the implementation can be configured without changing your business logic code.
 
