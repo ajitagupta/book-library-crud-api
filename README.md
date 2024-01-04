@@ -19,7 +19,9 @@ Each of them depend on each other, and is mandatory to make the applications run
 These projects were created using [Spring Initialzr](https://start.spring.io/).
 
 ## 1. Config Client
-Spring Boot makes the development of Spring applications faster and easier. Let's analyze our first project *or* microservice (which is simply a small service doing something).
+Let's analyze our first project *or* microservice (which is simply a small service doing something).
+
+Spring Boot makes the development of Spring applications faster and easier.
 
 Spring Boot is, like Spring, also based on **Inversion of Control (IoC)**, which is the delegation of creating objects and managing dependencies to a container and the idea behind a framework. It can also make use of annotation-based, setter-based or constructor-based **Dependency Injection (DI)**, where the goal is to create, initialize and wire a Java (or bean) objects defined in application classes and configurations, without the new keyword, and make them available to other components in the application.
 
