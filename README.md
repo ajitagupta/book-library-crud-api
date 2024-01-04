@@ -52,7 +52,7 @@ For each of the model entities in the application, we define a repository interf
 ### Altogether...
 We run the application by specifying a portnumber (e.g. `8080`) in `application.properties`. Our application can be accessed in the browser under `http://localhost:portnumber`.
 
-## 2. Config Server (Microservice: from monolith to microservice)
+## 2. Config Server
 
 ### Configuration
 Configuration is the process of specifying and loading external values to the software application statically or dynamically.
@@ -104,3 +104,4 @@ If we spin up two instances of a microservice, they will both register in Eureka
 - [YouTube Playlist by Telusko](https://www.youtube.com/watch?v=3WqDbU_Xnu4&list=PLsyeobzWxl7rRyGcqgZ3MP5pWGPwUvprI)
 - [Learning Microservices with Spring Boot](https://www.amazon.com/Learn-Microservices-Spring-Boot-Containerization/dp/1484261305/ref=sr_1_1?crid=9U8WG19NS9E7&keywords=learning+microservices+with+spring+boot&qid=1704288545&sprefix=learning+microservi%2Caps%2C211&sr=8-1)
 - Stackoverflow
+- Medium
