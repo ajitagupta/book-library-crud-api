@@ -57,6 +57,19 @@ This Spring Boot project `Config Server` is written as a Maven project with gene
 
 Spring Cloud Config Server provides an HTTP resource-based API for external configuration (name-value pairs or equivalent YAML content). The server is embeddable in a Spring Boot application, by using the @EnableConfigServer annotation. Consequently, the following application is a config server:
 
+## 3. Feign Consumer
+
+The Feign Consumer is a special type of consumer in the sense that there is need to write any implementation to call the RESTful services. 
+
+Feign allows you to abstract the mechanics of calling a REST service. Once you configure and annotate the Feign interface, you can call a REST service by making a simple Java function call. The actual implementation of making a REST call is handled at runtime by Feign. This means that the implementation can be configured without changing your business logic code.
+
+By just changing the Feign configuration in Java or using properties you can add encoding/decoding, logging, and change the REST call implementation library. All this is done through configuration only, while the business logic that calls the service remains unchanged (inside Config Client).
+
+Since Feign uses standard Java interfaces, it's also easy to mock them during unit tests.
+
+## 4. RestTemplate Consumer
+
+
 ## 5. Eureka Server
 
 Eureka is a service discovery tool supported by Spring. It enables loose coupling, i.e. two microservices don't have to talk to each other, e.g. to share under which IP and port they are available.
