@@ -70,6 +70,8 @@ An Eureka server is a centralized registry that knows all client applications ru
 
 ## 3. Feign Consumer
 
+The Feign Consumer doesn't add new functionality. It simply *consumes* our CRUD API without exposing it to the outside world.
+
 The Feign Consumer is a special type of consumer in the sense that there is need to write any implementation to call the RESTful services. This is called a *declarative* approach.
 
 Feign allows you to abstract the mechanics of calling a REST service. Once you configure and annotate the Feign interface, you can call a REST service by making a simple Java function call. The actual implementation of making a REST call is handled at runtime by Feign. This means that the implementation can be configured without changing your business logic code.
@@ -79,6 +81,8 @@ By just changing the Feign configuration in Java or using properties you can add
 Since Feign uses standard Java interfaces, it's also easy to mock them during unit tests.
 
 ## 4. RestTemplate Consumer
+
+The RestTemplate doesn't add new functionality either. It also simply consumer our CRUD API using the class `RestTemplate`.
 
 Spring RestTemplate class is part of Spring Web, introduced in Spring 3. RestTemplate class provides overloaded methods for different HTTP methods, such as GET, POST, PUT, DELETE etc.
 
@@ -92,13 +96,19 @@ Eureka is a service discovery tool supported by Spring. It enables loose couplin
 
 ### Load Balancing
 
-If we spin up two instances of a microservice, they will both register in Eureka with the same alias (since they have the same application name). Let's say we have our new instance located at http://localhost:8082. When the first microservice, as a client, wants to contact http://client/, Eureka will return both URL's and it's up to the consumer to decide which instance should be called (using Ribbon—the load balancer—together with Eureka's registry client). By default, Ribbon would apply a simple Round-Robin strategy.[
+If we spin up two instances of a microservice, they will both register in Eureka with the same alias (since they have the same application name). Let's say we have our new instance located at http://localhost:8082. When the first microservice, as a client, wants to contact http://client/, Eureka will return both URL's and it's up to the consumer to decide which instance should be called (using Ribbon—the load balancer—together with Eureka's registry client). By default, Ribbon would apply a simple Round-Robin strategy.
 
 ## Screenshots
 
-// Eureka
-// Postman
 
+### Postman: Testing the Config Server
+Config Server lets us send out a get request to the library API under port `8080` (as specified /by giving us `application-dev.properties`). We get the `404 - NOT FOUND` error as a response, since we haven't added a library to our H2 database yet.
+
+![Postman testing](https://i.ibb.co/WyWByWK/postman-testconfigserver.png "Postman testing")
+
+
+
+// Eureka
 
 ## References
 - [YouTube Playlist by Telusko](https://www.youtube.com/watch?v=3WqDbU_Xnu4&list=PLsyeobzWxl7rRyGcqgZ3MP5pWGPwUvprI)
