@@ -14,7 +14,7 @@ In this bootcamp we build a Book / Library CRUD API from the ground up using Spr
 4. RestTemplate Consumer
 5. Eureka Server
 
-Each of them depend on each other, and is mandatory to make the applications run. They can be downloaded and should be opened in an IDE like [Spring Tool Suite 4](https://spring.io/tools/). Additionally, we also use Postman for testing or *consuming* our API's, which is [freely available online](https://www.postman.com/downloads/).
+Each of them depend on each other, and is mandatory to make the applications run. They can be downloaded and should be opened in an IDE like [Spring Tool Suite 4](https://spring.io/tools/). Here, you can quickly create a new project via `File -> New -> Spring Starter Project`. Additionally, we also use Postman for testing or *consuming* our API's, which is [freely available online](https://www.postman.com/downloads/).
 
 
 ## 1. Config Client
