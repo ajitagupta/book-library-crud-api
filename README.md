@@ -16,7 +16,6 @@ In this bootcamp we build a Book / Library CRUD API from the ground up using Spr
 
 Each of them depend on each other, and is mandatory to make the applications run. They can be downloaded and should be opened in an IDE like [Spring Tool Suite 4](https://spring.io/tools/). Additionally, we also use Postman for testing or *consuming* our API's, which is [freely available online](https://www.postman.com/downloads/).
 
-These projects were created using [Spring Initialzr](https://start.spring.io/).
 
 ## 1. Config Client
 Let's analyze our first project *or* microservice (which is simply a small service doing something).
