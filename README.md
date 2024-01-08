@@ -18,7 +18,7 @@ In this bootcamp we build a Book / Library CRUD API from the ground up using Spr
 Each of them depend on each other, and is mandatory to make the applications run. They can be downloaded and should be opened in an IDE like [Spring Tool Suite 4](https://spring.io/tools/). Here, you can quickly create a new project via `File -> New -> Spring Starter Project`. Additionally, we also use Postman for calling or *consuming* our API's, which is [freely available online](https://www.postman.com/downloads/).
 
 
-## 1. Config Client
+## [1. Config Client](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-config-client)
 Let's analyze our first project *or* microservice (which is simply a small service doing something).
 
 Spring Boot makes the development of Spring applications faster and easier.
