@@ -110,7 +110,7 @@ Config Server lets us send out a get request to the library API under port `8080
 
 ![Postman testing](https://i.ibb.co/WyWByWK/postman-testconfigserver.png "Postman testing")
 
-### Postman: Testing Eureka
+### Testing Eureka
 All registered microservices are visible under Eureka under port 8761
 
 ![Eureka on port 8761](https://i.ibb.co/H7PCQm3/eureka.png "Eureka on port 8761")
