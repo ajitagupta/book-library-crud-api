@@ -6,13 +6,14 @@ The purpose of this bootcamp is to fill all knowledge gaps and take a deep dive 
 
 As a software engineer, in most projects you work on, Spring and Spring Boot are already implemented and used vigorously. So, you must have used a bit of Spring Boot yourself and extended the API. However, getting to know its essential functionality and setup is crucial in this age of flexible, highly available distributed systems, and scalable enterprise projects.
 
-In this bootcamp we build a Book / Library CRUD API from the ground up using Spring Boot. We will also use the Spring Cloud framework to build a distributed system with a microservice architecture. We create five Spring Boot projects or *five microservices*:
+In this bootcamp we build a Book / Library CRUD API from the ground up using Spring Boot. We will also use the Spring Cloud framework to build a distributed system with a microservice architecture. We create six Spring Boot projects or *six microservices*:
 
 1. Config Client
 2. Config Server
 3. Feign Consumer
 4. RestTemplate Consumer
 5. Eureka Server
+6. Gateway
 
 Each of them depend on each other, and is mandatory to make the applications run. They can be downloaded and should be opened in an IDE like [Spring Tool Suite 4](https://spring.io/tools/). Here, you can quickly create a new project via `File -> New -> Spring Starter Project`. Additionally, we also use Postman for calling or *consuming* our API's, which is [freely available online](https://www.postman.com/downloads/).
 
@@ -97,6 +98,10 @@ Eureka is a service discovery tool supported by Spring. It enables loose couplin
 
 If we spin up two instances of a microservice, they will both register in Eureka with the same alias (since they have the same application name). Let's say we have our new instance located at http://localhost:8082. When the first microservice, as a client, wants to contact http://client/, Eureka will return both URL's and it's up to the consumer to decide which instance should be called (using Ribbon—the load balancer—together with Eureka's registry client). By default, Ribbon would apply a simple Round-Robin strategy.
 
+## 6. Spring Cloud API Gateway
+
+After adding a dependency in `pom.xml` and several routing entries to `application.properties` we access our CRUD API via `http://localhost:8099/client/library/22`.
+
 ## Screenshots
 
 
@@ -105,7 +110,10 @@ Config Server lets us send out a get request to the library API under port `8080
 
 ![Postman testing](https://i.ibb.co/WyWByWK/postman-testconfigserver.png "Postman testing")
 
+### Postman: Testing Eureka
+All registered microservices are visible under Eureka under port 8761
 
+![Eureka on port 8761](https://i.ibb.co/H7PCQm3/eureka.png "Eureka on port 8761")
 
 // Eureka
 
