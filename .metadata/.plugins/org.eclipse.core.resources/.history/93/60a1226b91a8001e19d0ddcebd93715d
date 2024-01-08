@@ -1,0 +1,54 @@
+package com.example.consumer.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.example.consumer.feign.PractiseFeign;
+import com.example.demo.response.Response;
+
+
+
+@RestController // this annotation is responsible to make out class ready to receive api calls.
+//Behind the scenes creation of handler mapping beans to handle the apis according to http
+public class HomeController {
+	
+	@Autowired
+	PractiseFeign feign;
+	
+	
+	@GetMapping("/hello") // http get method - GetMapping
+	public String hello() {
+		String output = feign.getHello();
+		return output;
+	}
+	
+	@GetMapping("/h2")
+	public String hello2() {
+		return feign.gethello2();
+	}
+	
+	@GetMapping(value = "/h3") //produces = MediaType.APPLICATION_XML_VALUE
+	public ResponseEntity<Response> hello3(){
+	return feign.gethello3();
+	}
+	
+	@PostMapping("/h3")
+	public ResponseEntity<Response> create(@RequestBody Response response) { 
+		return feign.getcreate(response);		
+	}
+
+	
+	@DeleteMapping("/h3/{id}")
+	public ResponseEntity<String> delete(@PathVariable String id) {
+		return feign.getdelete(id);
+	}
+	
+	
+}

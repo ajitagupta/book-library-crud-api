@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;springbootpractice-CONSUMER&apos; to &apos;springbootpractice-CONSUMER-RestTemplate&apos;" description="Rename resource &apos;springbootpractice-CONSUMER&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/springbootpractice-CONSUMER" name="springbootpractice-CONSUMER-RestTemplate" stamp="1703862996717" updateReferences="true"/>
+</session>

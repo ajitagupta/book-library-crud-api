@@ -1,0 +1,12 @@
+package com.example.consumer.feign;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@FeignClient(url = "http://client")
+public interface PractiseFeign {
+	
+	@GetMapping("/hello")
+	String getHello();
+
+}

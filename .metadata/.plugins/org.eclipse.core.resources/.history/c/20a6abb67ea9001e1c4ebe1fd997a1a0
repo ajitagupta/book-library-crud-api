@@ -1,0 +1,61 @@
+package com.example.demo.model;
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+
+@Entity
+public class Book {
+	@Id
+	String id;
+	
+	
+	//In some cases we may want to explicitly set the column
+	//name instead of letting JPA do it. To do so, we can use
+	//the @Column annotation
+	@Column(name = "book-name", length = 1000, nullable = false, updatable = true, unique = true)
+	String name;
+	
+	@JsonProperty("year")
+	Integer publishYear;
+	String author;
+	
+	
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public Integer getPublishYear() {
+		return publishYear;
+	}
+	public void setPublishYear(Integer publishYear) {
+		this.publishYear = publishYear;
+	}
+	public String getAuthor() {
+		return author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	public Book(String id, String name, Integer publishYear, String author) {
+		this.id = id;
+		this.name = name;
+		this.publishYear = publishYear;
+		this.author = author;
+	}
+	public Book() {
+		
+	}	
+	
+
+}

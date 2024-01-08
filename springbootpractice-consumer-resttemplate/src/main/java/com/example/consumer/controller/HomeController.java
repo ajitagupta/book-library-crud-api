@@ -1,0 +1,67 @@
+package com.example.consumer.controller;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.client.RestTemplate;
+
+import com.example.consumer.response.Response;
+import com.example.consumer.exception.LibraryException;
+import com.example.consumer.model.Library;
+
+
+
+@RestController // this annotation is responsible to make out class ready to receive api calls.
+//Behind the scenes creation of handler mapping beans to handle the apis according to http
+public class HomeController {
+	
+	@Autowired
+	RestTemplate restTemplate;
+	
+	@GetMapping("/hello") // http get method - GetMapping
+	public String hello() {
+		String apiUrl = "http://client/hello";
+		ResponseEntity<String> response = restTemplate.getForEntity(apiUrl, String.class);
+		return response.getBody();
+	}
+	
+	@GetMapping("/hello2") // http get method - GetMapping
+	public String hello2() {
+		String apiUrl = "http://client/h2";
+		ResponseEntity<String> response = restTemplate.getForEntity(apiUrl, String.class);
+		return response.getBody();
+		//return "hello";
+	}
+	
+	@PostMapping("/h3") // http post method - PostMapping
+	public Response create2(@RequestBody Response request)  {
+		String apiUrl = "http://client/h3";
+		ResponseEntity<Response> response = restTemplate.postForEntity(apiUrl, request, Response.class);
+		return response.getBody();
+	}
+	
+	@PutMapping("/update")
+	public String updateLib(@RequestBody Library library) { //@RequestBody is responsible to recieve 'body' data from UI,and convrt that data to java class 
+		String apiUrl = "http://client/library/update";
+		try {
+		restTemplate.put(apiUrl, library, String.class);		
+		return "library updated";
+		}catch (Exception e) {
+			throw new LibraryException("Library with id:" + library.getId() +" is not present");
+		}
+		
+	}
+	
+	@DeleteMapping("/delete/{id}")
+	public String delete(@PathVariable String id) { //@RequestBody is responsible to recieve 'body' data from UI,and convrt that data to java class ;
+		String apiUrl = "http://client/library/delete/"+id;
+		restTemplate.delete(apiUrl, String.class);		
+		return "library deleted";
+	}
+}

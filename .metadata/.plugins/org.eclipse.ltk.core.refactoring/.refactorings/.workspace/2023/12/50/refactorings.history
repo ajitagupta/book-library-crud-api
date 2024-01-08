@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;springbootpractice&apos; to &apos;springbootpractice-config-client&apos;" description="Rename resource &apos;springbootpractice&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/springbootpractice" name="springbootpractice-config-client" stamp="1702301035587" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;server&apos; to &apos;springbootpractice-config-server&apos;" description="Rename resource &apos;server&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/server" name="springbootpractice-config-server" stamp="1702301443199" updateReferences="true"/>
+</session>

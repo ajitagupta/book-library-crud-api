@@ -1,0 +1,21 @@
+package com.example.consumer.feign;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import com.example.demo.response.Response;
+
+@FeignClient("client")
+public interface PractiseFeign {
+	
+	@GetMapping("/hello")
+	String getHello();
+	
+	@GetMapping("/h2")
+	public String gethello2();
+
+	@GetMapping(value = "/h3") //produces = MediaType.APPLICATION_XML_VALUE
+	public ResponseEntity<Response> gethello3();
+}

@@ -1,0 +1,37 @@
+package com.example.consumer.feign;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+
+import com.example.demo.response.Response;
+
+@FeignClient("client")
+public interface PracticeFeign {
+	
+	@GetMapping("/hello")
+	String getHello();
+	
+	@GetMapping("/h2")
+	public String gethello2();
+
+	@GetMapping(value = "/h3") //produces = MediaType.APPLICATION_XML_VALUE
+	public ResponseEntity<Response> gethello3();
+	
+	@PostMapping("/h3")
+	public ResponseEntity<Response> getcreate(@RequestBody Response response);
+	
+	@PutMapping("/h3")
+	public ResponseEntity<Response> getupdate(@RequestBody Response response);
+	
+	@DeleteMapping("/h3/{id}")
+	public ResponseEntity<String> getdelete(@PathVariable String id);
+	
+	
+}
