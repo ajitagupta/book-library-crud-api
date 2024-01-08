@@ -8,17 +8,17 @@ As a software engineer, in most projects you work on, Spring and Spring Boot are
 
 In this bootcamp we build a Book / Library CRUD API from the ground up using Spring Boot. We will also use the Spring Cloud framework to build a distributed system with a microservice architecture. We create six Spring Boot projects or *six microservices*:
 
-1. Config Client
-2. Config Server
-3. Feign Consumer
-4. RestTemplate Consumer
-5. Eureka Server
-6. Spring Cloud API Gateway
+1. [Config Client](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-config-client)
+2. [Config Server](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-config-server)
+3. [Feign Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-consumer-feign)
+4. [RestTemplate Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-consumer-resttemplate)
+5. [Eureka Server](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-eureka)
+6. [Spring Cloud API Gateway](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-gateway)
 
 Each of them depend on each other, and is mandatory to make the applications run. They can be downloaded and should be opened in an IDE like [Spring Tool Suite 4](https://spring.io/tools/). Here, you can quickly create a new project via `File -> New -> Spring Starter Project`. Additionally, we also use Postman for calling or *consuming* our API's, which is [freely available online](https://www.postman.com/downloads/).
 
 
-## [1. Config Client](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-config-client)
+## 1. Config Client
 Let's analyze our first project *or* microservice (which is simply a small service doing something).
 
 Spring Boot makes the development of Spring applications faster and easier.
