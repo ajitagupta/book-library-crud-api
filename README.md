@@ -101,7 +101,7 @@ If we spin up two instances of a microservice, they will both register in Eureka
 
 
 ### Postman: Testing the Config Server
-Config Server lets us send out a get request to the library API under port `8080` (as specified /by giving us `application-dev.properties`). We get the `404 - NOT FOUND` error as a response, since we haven't added a library to our H2 database yet.
+Config Server lets us send out a get request to the library API under port `8080` (as specified by `application-dev.properties`). We get the `404 - NOT FOUND` error as a response, since we haven't added a library to our H2 database yet.
 
 ![Postman testing](https://i.ibb.co/WyWByWK/postman-testconfigserver.png "Postman testing")
 
