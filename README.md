@@ -102,6 +102,7 @@ If we spin up two instances of a microservice, they will both register in Eureka
 
 After adding a dependency in `pom.xml` and several routing entries to `application.properties` we access our CRUD API via `http://localhost:8099/client/library/22`.
 
+
 ## Screenshots
 
 
@@ -111,11 +112,10 @@ Config Server lets us send out a get request to the library API under port `8080
 ![Postman testing](https://i.ibb.co/WyWByWK/postman-testconfigserver.png "Postman testing")
 
 ### Testing Eureka
-All registered microservices are visible under Eureka under port 8761
+All registered microservices are visible under Eureka under port 8761.
 
 ![Eureka on port 8761](https://i.ibb.co/H7PCQm3/eureka.png "Eureka on port 8761")
 
-// Eureka
 
 ## References
 - [YouTube Playlist by Telusko](https://www.youtube.com/watch?v=3WqDbU_Xnu4&list=PLsyeobzWxl7rRyGcqgZ3MP5pWGPwUvprI)
