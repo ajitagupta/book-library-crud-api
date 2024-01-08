@@ -100,11 +100,12 @@ If we spin up two instances of a microservice, they will both register in Eureka
 
 ## 6. Spring Cloud API Gateway
 
+This is a NO-JAVA project.
+
 After adding a dependency in `pom.xml` and several routing entries to `application.properties` we access our CRUD API via `http://localhost:8099/client/library/22`.
 
 
 ## Screenshots
-
 
 ### Postman: Testing the Config Server
 Config Server lets us send out a get request to the library API under port `8080` (as specified by `application-dev.properties`). We get the `404 - NOT FOUND` error as a response, since we haven't added a library to our H2 database yet.
