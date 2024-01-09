@@ -95,6 +95,7 @@ RestTemplate offers developers a high degree of flexibility and control over HTT
 
 Eureka is a service discovery tool supported by Spring. It enables loose coupling, i.e. two microservices don't have to talk to each other, e.g. to share under which IP and port they are available.
 
+It has to be enabled on each microservice so that they can talk to each other. This is done inside `application.properties`.
 
 ## 6. Spring Cloud API Gateway
 
