@@ -14,7 +14,7 @@ In this bootcamp we build a Book / Library CRUD API from the ground up using Spr
 4. [RestTemplate Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-consumer-resttemplate)
 5. [Eureka Server](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-eureka)
 6. [Spring Cloud API Gateway](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-gateway)
-7. [Resilience4j Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-gateway)
+7. [Resilience4j Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-consumer-resilience4j)
 
 Each of them depend on each other, and is mandatory to make the applications run. They can be downloaded and should be opened in an IDE like [Spring Tool Suite 4](https://spring.io/tools/). Here, you can quickly create a new project via `File -> New -> Spring Starter Project`. Additionally, we also use Postman for calling or *consuming* our API's, which is [freely available online](https://www.postman.com/downloads/).
 
