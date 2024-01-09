@@ -1,4 +1,4 @@
-# Book & Library API // work in progress
+# Book & Library API
 
 ![Static Badge](https://img.shields.io/badge/Book%20&%20Library%20API-Bootcamp-blue) ![Static Badge](https://img.shields.io/badge/Spring%20Boot-Tutorial-green) ![Static Badge](https://img.shields.io/badge/Microservices-Tutorial-green)
 
@@ -91,13 +91,9 @@ When we use the RestTemplate to call the RESTful service, it creates duplication
 
 RestTemplate offers developers a high degree of flexibility and control over HTTP requests, which is advantageous in intricate scenarios.
 
-## 5. Eureka Server
+## 5. Service Discovery using Eureka Server
 
 Eureka is a service discovery tool supported by Spring. It enables loose coupling, i.e. two microservices don't have to talk to each other, e.g. to share under which IP and port they are available.
-
-### Load Balancing
-
-If we spin up two instances of a microservice, they will both register in Eureka with the same alias (since they have the same application name). Let's say we have our new instance located at http://localhost:8082. When the first microservice, as a client, wants to contact http://client/, Eureka will return both URL's and it's up to the consumer to decide which instance should be called (using Ribbon—the load balancer—together with Eureka's registry client). By default, Ribbon would apply a simple Round-Robin strategy.
 
 
 ## 6. Spring Cloud API Gateway
@@ -114,7 +110,7 @@ After adding a dependency in `pom.xml` and several routing entries to `applicati
 Now start the gateway, the Eureka server, the config server, the config client, and the two other applications, in the respective order.
 
 
-## 7. Resilience4j Consumer
+## 7. Fault Tolerance with Resilience4j Consumer
 In microservices, an application or service makes a lot of remote calls to applications running in different services, usually on different machines across a network. If there are many callers to an unresponsive service, you can run out of critical resources leading to cascading failures across multiple systems.
 
 In case one of our microservices, especially the Config Client is down, we must have a fallback mechanism in place.
