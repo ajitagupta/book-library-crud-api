@@ -14,6 +14,7 @@ In this bootcamp we build a Book / Library CRUD API from the ground up using Spr
 4. [RestTemplate Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-consumer-resttemplate)
 5. [Eureka Server](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-eureka)
 6. [Spring Cloud API Gateway](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-gateway)
+7. [Resilience4j Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-gateway)
 
 Each of them depend on each other, and is mandatory to make the applications run. They can be downloaded and should be opened in an IDE like [Spring Tool Suite 4](https://spring.io/tools/). Here, you can quickly create a new project via `File -> New -> Spring Starter Project`. Additionally, we also use Postman for calling or *consuming* our API's, which is [freely available online](https://www.postman.com/downloads/).
 
@@ -98,6 +99,7 @@ Eureka is a service discovery tool supported by Spring. It enables loose couplin
 
 If we spin up two instances of a microservice, they will both register in Eureka with the same alias (since they have the same application name). Let's say we have our new instance located at http://localhost:8082. When the first microservice, as a client, wants to contact http://client/, Eureka will return both URL's and it's up to the consumer to decide which instance should be called (using Ribbon—the load balancer—together with Eureka's registry client). By default, Ribbon would apply a simple Round-Robin strategy.
 
+
 ## 6. Spring Cloud API Gateway
 
 This is a NO-JAVA project.
@@ -111,6 +113,18 @@ After adding a dependency in `pom.xml` and several routing entries to `applicati
 
 Now start the gateway, the Eureka server, the config server, the config client, and the two other applications, in the respective order.
 
+
+## 7. Resilience4j Consumer
+In microservices, an application or service makes a lot of remote calls to applications running in different services, usually on different machines across a network. If there are many callers to an unresponsive service, you can run out of critical resources leading to cascading failures across multiple systems.
+
+In case one of our microservices, especially the Config Client is down, we must have a fallback mechanism in place.
+
+**Circuit breakers** are a design pattern to create resilient microservices by limiting the impact of service failures and latencies. The major aim of the Circuit Breaker pattern is to prevent any cascading failure in the system. In a microservice system, failing fast is critical. If there are failures in the Microservice ecosystem, then you need to fail fast by opening the circuit. This ensures that no additional calls are made to the failing service so that we return an exception immediately. This pattern also monitors the system for failures and, once things are back to normal, the circuit is closed to allow normal functionality.
+
+Resilience4j is a new option for Spring developers to implement the circuit breaker, after Spring Cloud Hystrix got deprecated.
+
+To test our new consumer we launch it once alongside Config Client and once without. We see our default message in the first (as shown in the screenshot below), and a dummy message in the second setting. 
+
 ## Screenshots
 
 ### Postman: Testing the Config Server
@@ -122,6 +136,11 @@ Config Server lets us send out a get request to the library API under port `8080
 All registered microservices are visible under Eureka under port `8761`.
 
 ![Eureka on port 8761](https://i.ibb.co/H7PCQm3/eureka.png "Eureka on port 8761")
+
+## Testing Circuit Breaker
+Our default message is shown when the Config Client is up.
+
+![Circuit Breaker on port 8100](https://i.ibb.co/4gnKbBz/hystrix.png "Circuit Breaker on port 8100")
 
 
 ## References
