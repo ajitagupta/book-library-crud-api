@@ -52,6 +52,9 @@ For each of the model entities in the application, we define a repository interf
 
 ### Altogether...
 
+We add the dependencies for web applications, JPA, and the database.
+
+We write the CRUD API.
 ![MVC pattern](https://i.ibb.co/ncJGdqX/Untitled-Diagram-drawio.png "MVC pattern")
 
 We run the application by specifying a portnumber (e.g. `8080`) in `application.properties`. Our application can be accessed in the browser under `http://localhost:portnumber`.
