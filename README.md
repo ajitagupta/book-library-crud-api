@@ -51,6 +51,9 @@ package.
 For each of the model entities in the application, we define a repository interface. The repository `JPARepository` includes all the methods such as sorting, paginating data and CRUD operations, making it a very convenient solution that is available under Spring JPA. One can thus implement this interface with an underlying interface. For specifying that the underlying interface is a repository, a marker annotation `@Repository` is used.
 
 ### Altogether...
+
+![MVC pattern](https://i.ibb.co/ncJGdqX/Untitled-Diagram-drawio.png "MVC pattern")
+
 We run the application by specifying a portnumber (e.g. `8080`) in `application.properties`. Our application can be accessed in the browser under `http://localhost:portnumber`.
 
 ## 2. Config Server
