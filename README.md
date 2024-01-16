@@ -1,18 +1,18 @@
 # Book & Library CRUD API
 
-![Static Badge](https://img.shields.io/badge/Book%20&%20Library%20API-Bootcamp-blue) ![Static Badge](https://img.shields.io/badge/Spring%20Boot-Tutorial-green) ![Static Badge](https://img.shields.io/badge/Microservices-Tutorial-green)
+![Static Badge](https://img.shields.io/badge/Book%20&%20Library%20API-Bootcamp-blue) ![Static Badge](https://img.shields.io/badge/Spring%20Boot-Tutorial-green) ![Static Badge](https://img.shields.io/badge/Microservices-Tutorial-green) ![Static Badge](https://img.shields.io/badge/Spring%20Cloud-Tutorial-green)
 
 The purpose of this bootcamp is to take a deep dive into Spring Boot & Microservices architecture.
 
 As a software engineer, in most projects you work on, Spring and Spring Boot are already implemented and used vigorously. So, you must have used a bit of Spring Boot yourself and extended the API. However, getting to know its essential functionality and setup is crucial in this age of flexible, highly available distributed systems, and scalable enterprise projects.
 
-In this bootcamp we build a Book / Library CRUD API from the ground up using Spring Boot. We will also use the Spring Cloud framework to build a distributed system with a microservice architecture. We create seven Spring Boot projects or *seven microservices*. A microservice scales as multiple entities and communicates with the others. There are many technologies and patterns used to create them:
+In this bootcamp we build a Book / Library CRUD API from the ground up using Spring Boot. We will also use the Spring Cloud framework to build a distributed system with a microservice architecture. We create seven Spring Boot projects or *seven microservices*. A microservice scales as multiple entities and communicates with the others. We will take advantage of Spring Cloud (one of the most robust ways of creating microservices today) and the Service Discovery pattern to make the microservices work well together:
 
 1. [Config Client](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-config-client)
 2. [Config Server](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-config-server)
 3. [Feign Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-consumer-feign)
 4. [RestTemplate Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-consumer-resttemplate)
-5. [Service Discovery with Eureka Server](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-eureka)
+5. [Pattern: Service Discovery with Eureka Server](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-eureka)
 6. [Spring Cloud API Gateway](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-gateway)
 7. [Fault Tolerance with Resilience4j Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-consumer-resilience4j)
 
@@ -98,7 +98,7 @@ When we use the RestTemplate to call the RESTful service, it creates duplication
 
 RestTemplate offers developers a high degree of flexibility and control over HTTP requests, which is advantageous in intricate scenarios.
 
-## 5. Service Discovery using Eureka Server
+## 5. Pattern: Service Discovery using Eureka Server
 
 Eureka is a service discovery tool supported by Spring. It enables loose coupling, i.e. two microservices don't have to talk to each other, e.g. to share under which IP and port they are available.
 
