@@ -1,20 +1,20 @@
-# Book & Library API // work in progress
+# Book & Library CRUD API
 
 ![Static Badge](https://img.shields.io/badge/Book%20&%20Library%20API-Bootcamp-blue) ![Static Badge](https://img.shields.io/badge/Spring%20Boot-Tutorial-green) ![Static Badge](https://img.shields.io/badge/Microservices-Tutorial-green)
 
-The purpose of this bootcamp is to fill all knowledge gaps and take a deep dive into Spring Boot.
+The purpose of this bootcamp is to take a deep dive into Spring Boot & Microservices architecture.
 
 As a software engineer, in most projects you work on, Spring and Spring Boot are already implemented and used vigorously. So, you must have used a bit of Spring Boot yourself and extended the API. However, getting to know its essential functionality and setup is crucial in this age of flexible, highly available distributed systems, and scalable enterprise projects.
 
-In this bootcamp we build a Book / Library CRUD API from the ground up using Spring Boot. We will also use the Spring Cloud framework to build a distributed system with a microservice architecture. We create six Spring Boot projects or *six microservices*:
+In this bootcamp we build a Book / Library CRUD API from the ground up using Spring Boot. We will also use the Spring Cloud framework to build a distributed system with a microservice architecture. We create seven Spring Boot projects or *seven microservices*:
 
 1. [Config Client](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-config-client)
 2. [Config Server](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-config-server)
 3. [Feign Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-consumer-feign)
 4. [RestTemplate Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-consumer-resttemplate)
-5. [Eureka Server](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-eureka)
+5. [Service Discovery with Eureka Server](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-eureka)
 6. [Spring Cloud API Gateway](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-gateway)
-7. [Resilience4j Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-gateway)
+7. [Fault Tolerance with Resilience4j Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-consumer-resilience4j)
 
 Each of them depend on each other, and is mandatory to make the applications run. They can be downloaded and should be opened in an IDE like [Spring Tool Suite 4](https://spring.io/tools/). Here, you can quickly create a new project via `File -> New -> Spring Starter Project`. Additionally, we also use Postman for calling or *consuming* our API's, which is [freely available online](https://www.postman.com/downloads/).
 
@@ -51,7 +51,14 @@ package.
 For each of the model entities in the application, we define a repository interface. The repository `JPARepository` includes all the methods such as sorting, paginating data and CRUD operations, making it a very convenient solution that is available under Spring JPA. One can thus implement this interface with an underlying interface. For specifying that the underlying interface is a repository, a marker annotation `@Repository` is used.
 
 ### Altogether...
-We run the application by specifying a portnumber (e.g. `8080`) in `application.properties`. Our application can be accessed in the browser under `http://localhost:portnumber`.
+
+We add the dependencies for web applications, JPA, and the database in in `pom.xml`.
+
+We write the CRUD Rest API.
+
+![MVC pattern](https://i.ibb.co/ncJGdqX/Untitled-Diagram-drawio.png "MVC pattern")
+
+We run the application by specifying a portnumber (e.g. `8080`) and database connection in `application.properties`. Our application can be accessed in the browser under `http://localhost:portnumber`.
 
 ## 2. Config Server
 
@@ -91,14 +98,11 @@ When we use the RestTemplate to call the RESTful service, it creates duplication
 
 RestTemplate offers developers a high degree of flexibility and control over HTTP requests, which is advantageous in intricate scenarios.
 
-## 5. Eureka Server
+## 5. Service Discovery using Eureka Server
 
 Eureka is a service discovery tool supported by Spring. It enables loose coupling, i.e. two microservices don't have to talk to each other, e.g. to share under which IP and port they are available.
 
-### Load Balancing
-
-If we spin up two instances of a microservice, they will both register in Eureka with the same alias (since they have the same application name). Let's say we have our new instance located at http://localhost:8082. When the first microservice, as a client, wants to contact http://client/, Eureka will return both URL's and it's up to the consumer to decide which instance should be called (using Ribbon—the load balancer—together with Eureka's registry client). By default, Ribbon would apply a simple Round-Robin strategy.
-
+It has to be enabled on each microservice so that they can talk to each other. This is done inside `application.properties`.
 
 ## 6. Spring Cloud API Gateway
 
@@ -114,7 +118,7 @@ After adding a dependency in `pom.xml` and several routing entries to `applicati
 Now start the gateway, the Eureka server, the config server, the config client, and the two other applications, in the respective order.
 
 
-## 7. Resilience4j Consumer
+## 7. Fault Tolerance with Resilience4j Consumer
 In microservices, an application or service makes a lot of remote calls to applications running in different services, usually on different machines across a network. If there are many callers to an unresponsive service, you can run out of critical resources leading to cascading failures across multiple systems.
 
 In case one of our microservices, especially the Config Client is down, we must have a fallback mechanism in place.
@@ -137,7 +141,7 @@ All registered microservices are visible under Eureka under port `8761`.
 
 ![Eureka on port 8761](https://i.ibb.co/H7PCQm3/eureka.png "Eureka on port 8761")
 
-## Testing Circuit Breaker
+### Testing Circuit Breaker
 Our default message is shown when the Config Client is up.
 
 ![Circuit Breaker on port 8100](https://i.ibb.co/4gnKbBz/hystrix.png "Circuit Breaker on port 8100")
