@@ -24,14 +24,15 @@ Each of them depend on each other, and is mandatory to make the applications run
 ## 1. Config Client
 Let's analyze our first project *or* microservice.
 
+Now, let's have a look at some more unwieldy terms to support our API, which contains a simple **CRUD (Create, Read, Update, Delete) operations backend for Books and Libraries**.
+
+### Spring Boot
+
 Spring Boot makes the development of Spring applications faster and easier.
 
 Spring Boot is, like Spring, also based on **Inversion of Control (IoC)**, which is the delegation of creating objects and managing dependencies to a container and the idea behind a framework. It can also make use of annotation-based, setter-based or constructor-based **Dependency Injection (DI)**, where the goal is to create, initialize and wire a Java (or bean) objects defined in application classes and configurations, without the new keyword, and make them available to other components in the application.
 
 Spring Boot uses additional annotations. This includes `RestController` annotation, which marks the class as a Controller, conventional URL's, along with subordinate annotations for HTTP verbs, to make it possible to handle RESTful service requests.
-
-Now, let's have a look at some more unwieldy terms to support our API, which simply contains **CRUD (Create, Read, Update, Delete) operations** for the Book and Library class.
-
 
 ### Service
 A Spring boot service is defined as a class file that includes the `@Service` annotation and allows developers to add business functionalities *or* business *logic*. The annotation is used with the classes that provide these business functionalities.
