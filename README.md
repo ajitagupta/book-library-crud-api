@@ -24,7 +24,7 @@ Each of them depend on each other, and is mandatory to make the applications run
 ## 1. Config Client
 Let's analyze our first project *or* microservice.
 
-Now, let's have a look at some more unwieldy terms to support our API, which contains a simple **CRUD (Create, Read, Update, Delete) operations backend for Books and Libraries**.
+Now, let's have a look at some more unwieldy terms to support our API, which contains a simple **CRUD (Create, Read, Update, Delete) backend for Books and Libraries**.
 
 ### Spring Boot
 
