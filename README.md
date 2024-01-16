@@ -12,7 +12,7 @@ A microservice scales as multiple entities and communicates with the others. We 
 
 1. [Config Client](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-config-client)
 2. [Config Server](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-config-server)
-3. [Feign Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-consumer-feign)
+3. [Spring Cloud OpenFeign Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-consumer-feign)
 4. [RestTemplate Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-consumer-resttemplate)
 5. [Pattern: Service Discovery with Eureka Server](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-eureka)
 6. [Spring Cloud API Gateway](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-gateway)
@@ -79,7 +79,7 @@ The centralized configuration works using a typical client-server architecture p
 
 An Eureka server is a centralized registry that knows all client applications running on each port and IP address. Each microservice has to register to it.
 
-## 3. Feign Consumer
+## 3. Spring Cloud OpenFeign Consumer
 
 The Feign Consumer doesn't add new functionality. It simply *consumes* our CRUD API without exposing it to the outside world.
 
