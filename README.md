@@ -2,7 +2,7 @@
 
 ![Static Badge](https://img.shields.io/badge/Book%20&%20Library%20API-Bootcamp-blue) ![Static Badge](https://img.shields.io/badge/Spring%20Boot-Tutorial-green) ![Static Badge](https://img.shields.io/badge/Microservices-Tutorial-green) ![Static Badge](https://img.shields.io/badge/Spring%20Cloud-Tutorial-green)
 
-The purpose of this bootcamp is to take a deep dive into Spring Boot & Microservices architecture.
+The purpose of this bootcamp isn't taking a deep dive into each concept, but instead we're going to give an overview and explain the foundational ideas behind Springboot, microservices architecture, and Spring Cloud.
 
 As a software engineer, in most projects you work on, Spring and Spring Boot are already implemented and used vigorously. So, you must have used a bit of Spring Boot yourself and extended the API. However, getting to know its essential functionality and setup is crucial in this age of flexible, highly available distributed systems, and scalable enterprise projects.
 
