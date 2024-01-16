@@ -44,6 +44,7 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\gajit\OneDrive\Documents\workspace-spring-tool-suite-4-4.20.1.RELEASE\springbootpractice-gateway"/>
 			<item value="C:\Users\gajit\Documents\workspace-spring-tool-suite-4-4.20.1.RELEASE\.metadata\.plugins\org.eclipse.core.resources\.projects\springbootpractice-config-server"/>
 			<item value="C:\Users\gajit\Downloads\server\server"/>
 		</list>
@@ -57,5 +58,9 @@
 	<section name="ChooseWorkspaceDialogSettings">
 		<item key="DIALOG_X_ORIGIN" value="838"/>
 		<item key="DIALOG_Y_ORIGIN" value="463"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+		</list>
 	</section>
 </section>

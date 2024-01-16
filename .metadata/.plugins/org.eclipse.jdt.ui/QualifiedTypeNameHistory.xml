@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
     <fullyQualifiedTypeName name="org.springframework.http.MediaType"/>
-    <fullyQualifiedTypeName name="com.example.demo.response.Response"/>
     <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="org.springframework.web.servlet.ModelAndView"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Entity"/>
@@ -28,7 +26,6 @@
     <fullyQualifiedTypeName name="com.example.demo.exception.BookException"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ExceptionHandler"/>
     <fullyQualifiedTypeName name="com.example.demo.exception.ErrorResponse"/>
-    <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
     <fullyQualifiedTypeName name="jakarta.persistence.ManyToMany"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestMapping"/>
@@ -45,7 +42,6 @@
     <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.client.loadbalancer.LoadBalanced"/>
     <fullyQualifiedTypeName name="org.springframework.web.client.RestTemplate"/>
-    <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="com.example.consumer.response.Response"/>
     <fullyQualifiedTypeName name="com.example.consumer.repositories.LibraryRepository"/>
@@ -56,7 +52,12 @@
     <fullyQualifiedTypeName name="org.springframework.cloud.openfeign.FeignClient"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="com.example.consumer.feign.PractiseFeign"/>
-    <fullyQualifiedTypeName name="org.springframework.cloud.openfeign.EnableFeignClients"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.config.server.EnableConfigServer"/>
+    <fullyQualifiedTypeName name="io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker"/>
+    <fullyQualifiedTypeName name="org.springframework.http.ResponseEntity"/>
+    <fullyQualifiedTypeName name="com.example.demo.response.Response"/>
+    <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
+    <fullyQualifiedTypeName name="org.springframework.cloud.openfeign.EnableFeignClients"/>
+    <fullyQualifiedTypeName name="java.lang.Throwable"/>
 </qualifiedTypeNameHistroy>

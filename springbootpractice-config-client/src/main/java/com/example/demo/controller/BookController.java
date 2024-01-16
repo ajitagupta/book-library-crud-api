@@ -91,10 +91,9 @@ public class BookController {
 		return "book saved";
 	}
 	
-	@PutMapping("/update")
-	public String updateBook(@RequestBody Book book)	{
-		String id = book.getId();
-		Book dbBook = bookService.findBookById(id);
+	@PutMapping("/{id}")
+	public String updateBook(@RequestBody Book book, @PathVariable Integer id)	{
+		Book dbBook = bookService.findBookById(String.valueOf(id));
 		dbBook.setAuthor(book.getAuthor());
 		dbBook.setPublishYear(book.getPublishYear());
 	    bookService.save(dbBook);
@@ -102,7 +101,7 @@ public class BookController {
 		
 	}
 	
-	@DeleteMapping("/delete/{id}")
+	@DeleteMapping("/{id}")
 	public String deleteBook(@PathVariable String id)	{
 		
 		bookService.remove(id);

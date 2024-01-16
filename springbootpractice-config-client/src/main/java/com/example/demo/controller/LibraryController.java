@@ -49,13 +49,13 @@ public class LibraryController {
 		return libraryService.findBookByName(id, bookname);
 	}
 	
-	@PostMapping("/create")
+	@PostMapping
 	public String createLibrary(@RequestBody Library library) {
 		libraryService.save(library);
 		return "library saved";
 	}
 	
-	@PutMapping("/update")
+	@PutMapping
 	public String update(@RequestBody Library response) {
 		String toUpdate = response.getId();
 		Library library = libraryService.findLibraryById(toUpdate);
@@ -68,7 +68,7 @@ public class LibraryController {
 		
 	}
 	
-	@DeleteMapping("/delete/{id}")
+	@DeleteMapping("/{id}")
 	public String delete(@PathVariable String id) {
 		Library library = libraryService.findLibraryById(id);
 		libraryService.remove(library);
