@@ -6,7 +6,7 @@ The purpose of this bootcamp is to take a deep dive into Spring Boot & Microserv
 
 As a software engineer, in most projects you work on, Spring and Spring Boot are already implemented and used vigorously. So, you must have used a bit of Spring Boot yourself and extended the API. However, getting to know its essential functionality and setup is crucial in this age of flexible, highly available distributed systems, and scalable enterprise projects.
 
-In this bootcamp we build a Book / Library CRUD API from the ground up using Spring Boot. We will also use the Spring Cloud framework to build a distributed system with a microservice architecture. We create seven Spring Boot projects or *seven microservices*. A microservice scales as multiple entities and communicates with the others. There are many technologies and patterns used to create them (because you're working in multiple problems together):
+In this bootcamp we build a Book / Library CRUD API from the ground up using Spring Boot. We will also use the Spring Cloud framework to build a distributed system with a microservice architecture. We create seven Spring Boot projects or *seven microservices*. A microservice scales as multiple entities and communicates with the others. There are many technologies and patterns used to create them (because you're working on multiple problems together):
 
 1. [Config Client](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-config-client)
 2. [Config Server](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-config-server)
