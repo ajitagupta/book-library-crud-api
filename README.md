@@ -22,7 +22,7 @@ Each of them depend on each other, and is mandatory to make the applications run
 
 
 ## 1. Config Client
-Let's analyze our first project *or* microservice (which is simply a small service doing something).
+Let's analyze our first project *or* microservice.
 
 Spring Boot makes the development of Spring applications faster and easier.
 
