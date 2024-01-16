@@ -61,7 +61,7 @@ We write the CRUD Rest API.
 
 ![MVC pattern](https://i.ibb.co/ncJGdqX/Untitled-Diagram-drawio.png "MVC pattern")
 
-We run the application by specifying a portnumber (e.g. the default is `8080`) and database connection in `application.properties` as key-value pairs. Our application can be accessed in the browser under `http://localhost:portnumber`.
+We run the application by specifying a portnumber (e.g. the default is `server.port=8080`) and database connection in `application.properties` as key-value pairs. Our application can be accessed in the browser under `http://localhost:portnumber`.
 
 ## 2. Config Server
 
