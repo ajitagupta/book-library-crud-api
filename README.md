@@ -8,7 +8,7 @@ As a software engineer, in most projects you work on, Spring and Spring Boot are
 
 In this bootcamp we build a Book / Library CRUD API from the ground up using Spring Boot. We will also use the Spring Cloud framework to build a distributed system with a microservice architecture. We create seven Spring Boot projects or *seven microservices*.
 
-A microservice scales as multiple entities and communicates with the others. We will take advantage of Spring Cloud (one of the most robust ways of creating microservices today) and the Service Discovery pattern to make the microservices work well together:
+A microservice scales as a single entity and communicates with other microservices. We will take advantage of Spring Cloud (one of the most robust ways of creating microservices today) and the Service Discovery pattern to make the microservices work well together:
 
 1. [Config Client](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-config-client)
 2. [Config Server](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-config-server)
