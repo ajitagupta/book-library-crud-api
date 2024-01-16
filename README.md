@@ -141,7 +141,7 @@ All registered microservices are visible under Eureka under port `8761`.
 
 ![Eureka on port 8761](https://i.ibb.co/H7PCQm3/eureka.png "Eureka on port 8761")
 
-## Testing Circuit Breaker
+### Testing Circuit Breaker
 Our default message is shown when the Config Client is up.
 
 ![Circuit Breaker on port 8100](https://i.ibb.co/4gnKbBz/hystrix.png "Circuit Breaker on port 8100")
