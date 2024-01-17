@@ -64,6 +64,8 @@ We write the CRUD Rest API.
 
 ![MVC pattern](https://i.ibb.co/7tZQhtw/mvc-drawio-colored.png "MVC pattern")
 
+We set the database inside `application.properties-dev` and `application.properties-qa`.
+
 ## 2. Config Server
 
 ### Configuration
