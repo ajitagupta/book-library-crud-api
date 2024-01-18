@@ -14,7 +14,7 @@ public class Product {
 	private String name;
 	@Column(unique=true)
 	private String brandName;
-	private int price;
+	private Integer price;
 
 	public Integer getId() {
 		return id;
@@ -34,11 +34,11 @@ public class Product {
 	public void setBrandName(String brandName) {
 		this.brandName = brandName;
 	}
-	public int getPrice() {
+	public Integer getPrice() {
 		return price;
 	}
-	public void setPrice(int price) {
+	public void setPrice(Integer price) {
 		this.price = price;
 	}
-	
+
 }

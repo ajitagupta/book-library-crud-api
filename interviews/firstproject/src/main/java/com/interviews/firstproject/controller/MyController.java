@@ -37,32 +37,55 @@ public class MyController {
 	
 	@PostMapping
 	public Product createProduct(@RequestBody Product product)	{
-		pR.save(product);// save is upsert (update + insert)
-		return product;
+		if (pR.findByBrandName(product.getBrandName()) == null)
+		{
+			pR.save(product);// save is upsert (update + insert)
+			return product;
+		}
+		throw new BrandException("Brandname " + product.getBrandName() + " must be unique");
 	}
 	
 	@PutMapping("/{id}")
 	public String updateProduct(@RequestBody Product product, @PathVariable Integer id)	{
 		Optional<Product> dbProduct = pR.findById(id);
 		if (dbProduct.isPresent()	) {
+			//1st approach
 			Product pr = dbProduct.get();
-			product.setId(id);
-			pR.save(product);
-			return "Product updated";
+			if (pR.findByBrandName(product.getBrandName()) == null)
+			{
+				pr.setName(product.getName()!= null? product.getName() : pr.getName());
+				pr.setBrandName(product.getBrandName() != null ? product.getBrandName() : pr.getBrandName());
+				pr.setPrice(product.getPrice() != null ? product.getPrice() : pr.getPrice());
+				pR.save(pr);
+				return "Product updated";
+			}	else	{
+				throw new BrandException("Brandname " + product.getBrandName() + " must be unique");
+			}
+			//2nd approach
+			
+//			product.setId(id);
+//			pR.save(product);
+			
+			
 		}
-		return new ProductException("Product not valid");
+		throw new ProductException("Product not valid");
 	}
 	
 	@PatchMapping("/{id}")
 	public String patchProduct(@RequestBody Product product, @PathVariable Integer id)	{
 		Optional<Product> dbProduct = pR.findById(id);
 		if (dbProduct.isPresent()	) {
-			Product pr = dbProduct.get();
-			pr.setBrandName(product.getBrandName()); // patch
-			pR.save(pr);
-			return "Product patched";
+			if (pR.findByBrandName(product.getBrandName()) == null)
+			{			
+				Product pr = dbProduct.get();
+				pr.setBrandName(product.getBrandName()); // patch
+				pR.save(pr);
+				return "Product patched";
+			}	else	{
+				throw new ProductException("Brandname " + product.getBrandName() + " must be unique");				
+			}
 		}
-		return new ProductException("Product not valid");
+		throw new ProductException("Product not valid");
 	}
 	
 	

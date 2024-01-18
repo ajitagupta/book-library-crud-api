@@ -1,12 +1,12 @@
 package com.interviews.firstproject.exception;
 
-public class ProductException {
-	
-		private String message;
+public class ProductException extends RuntimeException{
 
-		public ProductException(String message) {
+	private String message;
 
-			this.message = message;
-		}
+	public ProductException(String message) {
+        super(message);
+		this.message = message;
+	}
 
 }
