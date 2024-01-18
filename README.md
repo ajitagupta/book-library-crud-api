@@ -16,7 +16,7 @@ A microservice scales as a single entity and communicates with other microservic
 4. [RestTemplate Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-consumer-resttemplate)
 5. [Pattern: Service Discovery with Eureka Server](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-eureka)
 6. [Spring Cloud API Gateway](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-gateway)
-7. [Fault Tolerance with Resilience4j Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-consumer-resilience4j)
+7. [Pattern: Fault Tolerance with Resilience4j Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-consumer-resilience4j)
 
 Each of them depend on each other, and is mandatory to make the applications run. They can be downloaded and should be opened in an IDE like [Spring Tool Suite 4](https://spring.io/tools/). Here, you can quickly create a new project via `File -> New -> Spring Starter Project`.
 
@@ -126,7 +126,7 @@ After adding a dependency in `pom.xml` and several routing entries to `applicati
 Now start the gateway, the Eureka server, the config server, the config client, and the two other applications, in the respective order.
 
 
-## 7. Fault Tolerance with Resilience4j Consumer
+## 7. Pattern: Fault Tolerance with Resilience4j Consumer
 In microservices, an application or service makes a lot of remote calls to applications running in different services, usually on different machines across a network. If there are many callers to an unresponsive service, you can run out of critical resources leading to cascading failures across multiple systems.
 
 In case one of our microservices, especially the Config Client is down, we must have a fallback mechanism in place.
