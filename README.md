@@ -55,7 +55,7 @@ Now that we have our model designed, we can create our JPA repositories (alert: 
 
 For each of the model entities in the application, we define a repository interface. The repository `JPARepository` includes all the methods such as sorting, paginating data and CRUD operations, making it a very convenient solution that is available under Spring JPA. One can thus implement this interface with an underlying interface. For specifying that the underlying interface is a repository, a marker annotation `@Repository` is used.
 
-### Altogether...
+### Putting it all together
 
 We add the dependencies for web applications, JPA, and the database in `pom.xml`.
 
