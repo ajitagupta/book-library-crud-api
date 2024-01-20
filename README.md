@@ -161,3 +161,11 @@ Our default message is shown when the Config Client is up.
 - Stackoverflow
 - Medium
 - [YouTube Playlist by Java Brains](https://www.youtube.com/playlist?list=PLqq-6Pq4lTTZSKAFG6aCDVDP86Qx4lNas)
+
+
+## License
+![Public Domain](https://i.ibb.co/74t3hCb/public-domain.png "Public Domain")
+
+To the extent possible under law, Ajita Gupta has waived all copyright and related or neighboring rights to this work.
+
+
