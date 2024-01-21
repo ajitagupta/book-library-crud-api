@@ -81,7 +81,7 @@ The centralized configuration works using a typical client-server architecture p
 
 ![Config Server](https://i.ibb.co/NjSLxxH/config-server.webp "Config Server")
 
-To simulate the real world, we separate databases with respect to a user's profile inside `application-dev.properties` and `application-qa.properties`, place and link them to GitHub (or *Cloud*, which is where Spring Cloud comes from), using `spring.cloud.config.server.git.uri=https://github.com/ajitagupta/book-library-crud-api`.
+To simulate the real world, we separate databases with respect to a user's profile inside `application-dev.properties` and `application-qa.properties`, place and link them to GitHub (or *Cloud*, which is where the name Spring Cloud comes from), using `spring.cloud.config.server.git.uri=https://github.com/ajitagupta/book-library-crud-api`.
 
 We add database dependencies inside `pom.xml`.
 
