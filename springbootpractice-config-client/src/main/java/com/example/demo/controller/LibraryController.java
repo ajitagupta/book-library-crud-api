@@ -1,5 +1,7 @@
 package com.example.demo.controller;
 
+import java.util.Optional;
+
 //server -- is the one provides service
 //consumer -- is the one consumes api 
 //server or consumer are same only
@@ -28,6 +30,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.example.demo.exception.LibraryException;
 import com.example.demo.model.Book;
 import com.example.demo.model.Library;
 import com.example.demo.service.LibraryService;
@@ -50,21 +53,20 @@ public class LibraryController {
 	}
 	
 	@PostMapping
-	public String createLibrary(@RequestBody Library library) {
+	public Library createLibrary(@RequestBody Library library) {
 		libraryService.save(library);
-		return "library saved";
+		return library;
 	}
 	
-	@PutMapping
-	public String update(@RequestBody Library response) {
-		String toUpdate = response.getId();
-		Library library = libraryService.findLibraryById(toUpdate);
+	@PutMapping("/{id}")
+	public String update(@RequestBody Library response, @PathVariable String id)	{
+		Library library = libraryService.findLibraryById(id);
 		library.setName(response.getName());
 		library.setAddress(response.getAddress());
 		library.setBooks(response.getBooks());
 		library.setNumBooks(response.getNumBooks());
 		libraryService.save(library);
-		return "library updated";
+		return "Library updated";
 		
 	}
 	
@@ -72,7 +74,7 @@ public class LibraryController {
 	public String delete(@PathVariable String id) {
 		Library library = libraryService.findLibraryById(id);
 		libraryService.remove(library);
-		return "library deleted";
+		return "Library deleted";
 	}
 		
 	

@@ -88,7 +88,7 @@ public class BookController {
 	@PostMapping
 	public String createBook(@RequestBody Book book) {
 		bookService.save(book);
-		return "book saved";
+		return "Book saved";
 	}
 	
 	@PutMapping("/{id}")
@@ -103,14 +103,8 @@ public class BookController {
 	
 	@DeleteMapping("/{id}")
 	public String deleteBook(@PathVariable String id)	{
-		
+		Book dbBook = bookService.findBookById(id);
 		bookService.remove(id);
-		
-		if (bookService.findBookById(id) != null) {
-			bookService.remove(id);
-			return "Book deleted";
-		}	else	{
-			return "Book invalid";
-		}			
+		return "Book deleted";		
 	}
 }

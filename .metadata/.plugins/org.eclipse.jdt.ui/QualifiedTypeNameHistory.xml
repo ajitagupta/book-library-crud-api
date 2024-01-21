@@ -21,7 +21,6 @@
     <fullyQualifiedTypeName name="org.springframework.data.repository.query.Param"/>
     <fullyQualifiedTypeName name="java.lang.Integer"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.DeleteMapping"/>
-    <fullyQualifiedTypeName name="java.util.Optional"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestControllerAdvice"/>
     <fullyQualifiedTypeName name="com.example.demo.exception.BookException"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ExceptionHandler"/>
@@ -33,7 +32,6 @@
     <fullyQualifiedTypeName name="com.example.demo.service.LibraryService"/>
     <fullyQualifiedTypeName name="com.example.demo.model.Library"/>
     <fullyQualifiedTypeName name="com.example.demo.repositories.LibraryRepository"/>
-    <fullyQualifiedTypeName name="com.example.demo.exception.LibraryException"/>
     <fullyQualifiedTypeName name="jakarta.persistence.OneToMany"/>
     <fullyQualifiedTypeName name="jakarta.persistence.CascadeType"/>
     <fullyQualifiedTypeName name="org.hibernate.mapping.List"/>
@@ -60,4 +58,6 @@
     <fullyQualifiedTypeName name="org.springframework.http.HttpStatus"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.openfeign.EnableFeignClients"/>
     <fullyQualifiedTypeName name="java.lang.Throwable"/>
+    <fullyQualifiedTypeName name="java.util.Optional"/>
+    <fullyQualifiedTypeName name="com.example.demo.exception.LibraryException"/>
 </qualifiedTypeNameHistroy>
