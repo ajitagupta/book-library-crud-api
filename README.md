@@ -87,6 +87,8 @@ We add database dependencies inside `pom.xml`.
 
 We set the active profile of Config Client to `spring.profiles.active=dev`.
 
+Later, the discovery server will come into the picture.
+
 
 ## 3. Spring Cloud OpenFeign Consumer
 
