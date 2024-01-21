@@ -63,11 +63,6 @@ We write the CRUD Rest API.
 
 ![MVC pattern](https://i.ibb.co/pK0s6z4/mvc-drawio.png "MVC pattern")
 
-To simulate the real-world, we separate databases with respect to a user's profile inside `application-dev.properties` and `application-qa.properties`, place and link them to GitHub.
-
-We set the database the active profile of Config Client to `spring.profiles.active=dev` and the application name to `spring.application.name=client`.
-
-
 ## 2. Config Server
 
 ### Configuration
@@ -80,9 +75,14 @@ Microservices architecture is a distributed system architecture where there are 
 ### Configuration Server
 The solution to these problems is externalizing the microservices configuration to an external location to handle it from a single place using a dedicated microservice called Configuration Server.
 
-The centralized configuration works using a typical client-server architecture pattern. There is a dedicated microservices application called Config Server which has access to the Configuration store like a git repository. Then each microservices in the system is a Config Client that gets the location of the Config Server from the Discovery server (here we use Eureka) during application startup. Hence, the names Config Server and Config Client.
+The centralized configuration works using a typical client-server architecture pattern. There is a dedicated microservices application called Config Server which has access to the Configuration store like a git repository. Then each microservice in the system is a Config Client that gets the location of the Config Server from the Discovery server (here we use Eureka) during application startup. Hence, the names Config Server and Config Client.
 
 An Eureka server is a centralized registry that knows all client applications running on each port and IP address. Each microservice has to register to it.
+
+To simulate the real-world, we separate databases with respect to a user's profile inside `application-dev.properties` and `application-qa.properties`, place and link them to GitHub, using `spring.cloud.config.server.git.uri=https://github.com/ajitagupta/book-library-crud-api`.
+
+We set the database the active profile of Config Client to `spring.profiles.active=dev` and the application name to `spring.application.name=client`. In Config Server, we specify the Eureka `server.port=8888` and `eureka.client.service-url.defaultZone=http://localhost:8761/eureka`.
+
 
 ## 3. Spring Cloud OpenFeign Consumer
 
