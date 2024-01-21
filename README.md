@@ -83,7 +83,7 @@ The centralized configuration works using a typical client-server architecture p
 
 To simulate the real-world, we separate databases with respect to a user's profile inside `application-dev.properties` and `application-qa.properties`, place and link them to GitHub, using `spring.cloud.config.server.git.uri=https://github.com/ajitagupta/book-library-crud-api`.
 
-We set the database the active profile of Config Client to `spring.profiles.active=dev` and the application name to `spring.application.name=client`. In Config Server, we specify the Eureka `server.port=8888` and `eureka.client.service-url.defaultZone=http://localhost:8761/eureka`.
+We set the database the active profile of Config Client to `spring.profiles.active=dev` and the application name to `spring.application.name=client`. In Config Server, we specify the Eureka ports to `server.port=8888` and `eureka.client.service-url.defaultZone=http://localhost:8761/eureka`.
 
 
 ## 3. Spring Cloud OpenFeign Consumer
