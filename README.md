@@ -77,9 +77,9 @@ The solution to these problems is externalizing the microservices configuration 
 
 The centralized configuration works using a typical client-server architecture pattern. There is a dedicated microservices application called Config Server which has access to the Configuration store like a git repository. Then each microservice in the system is a Config Client that gets the location of the Config Server from the Discovery server (here we use Eureka) during application startup. Hence, the names Config Server and Config Client.
 
-An Eureka server is a centralized registry that knows all client applications running on each port and IP address. Each microservice has to register to it.
-
 ### Putting it all together
+
+![Config Server](https://i.ibb.co/NjSLxxH/config-server.webp "Config Server")
 
 To simulate the real-world, we separate databases with respect to a user's profile inside `application-dev.properties` and `application-qa.properties`, place and link them to GitHub, using `spring.cloud.config.server.git.uri=https://github.com/ajitagupta/book-library-crud-api`.
 
@@ -109,6 +109,8 @@ When we use the RestTemplate to call the RESTful service, it creates duplication
 RestTemplate offers developers a high degree of flexibility and control over HTTP requests, which is advantageous in intricate scenarios.
 
 ## 5. Pattern: Service Discovery using Eureka Server
+
+An Eureka server is a centralized registry that knows all client applications running on each port and IP address. Each microservice has to register to it.
 
 Eureka is a service discovery tool supported by Spring. It enables loose coupling, i.e. two microservices don't have to talk to each other, e.g. to share under which IP and port they are available.
 
@@ -161,7 +163,7 @@ Our default message is shown when the Config Client is up.
 - [YouTube Playlist by Telusko](https://www.youtube.com/watch?v=3WqDbU_Xnu4&list=PLsyeobzWxl7rRyGcqgZ3MP5pWGPwUvprI)
 - [Learning Microservices with Spring Boot](https://www.amazon.com/Learn-Microservices-Spring-Boot-Containerization/dp/1484261305/ref=sr_1_1?crid=9U8WG19NS9E7&keywords=learning+microservices+with+spring+boot&qid=1704288545&sprefix=learning+microservi%2Caps%2C211&sr=8-1)
 - Stackoverflow
-- Medium
+- [Medium](https://dineshchandgr.medium.com/?source=post_page-----a48d4464722--------------------------------)
 - [YouTube Playlist by Java Brains](https://www.youtube.com/playlist?list=PLqq-6Pq4lTTZSKAFG6aCDVDP86Qx4lNas)
 
 
