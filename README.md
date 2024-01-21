@@ -18,7 +18,7 @@ A microservice scales as a single entity and communicates with other microservic
 6. [Spring Cloud API Gateway](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-gateway)
 7. [Pattern: Fault Tolerance with Resilience4j Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-consumer-resilience4j)
 
-Each of them can be downloaded and should be opened in an IDE like [Spring Tool Suite 4](https://spring.io/tools/).
+Each of them should be opened in an IDE like [Spring Tool Suite 4](https://spring.io/tools/).
 
 Additionally, we also need a way for calling or *consuming* our API's programmatically. We do this using Postman, which is [freely available online](https://www.postman.com/downloads/).
 
@@ -100,7 +100,6 @@ Feign allows you to abstract the mechanics of calling a REST service. Once you c
 
 By just changing the Feign configuration in Java or using properties you can add encoding/decoding, logging, and change the REST call implementation library. All this is done through configuration only, while the business logic that calls the service remains unchanged (inside Config Client).
 
-Since Feign uses standard Java interfaces, it's also easy to mock them during unit tests.
 
 ## 4. RestTemplate Consumer
 
@@ -118,7 +117,7 @@ An Eureka server is a centralized registry that knows all client applications ru
 
 Eureka is a service discovery tool supported by Spring. It enables loose coupling, i.e. two microservices don't have to talk to each other, e.g. to share under which IP and port they are available.
 
-It has to be enabled on each microservice so that they can talk to each other. This is done inside `application.properties`.  and the application name to `spring.application.name=client`. In Config Server, we specify the Eureka ports to `server.port=8888` and `eureka.client.service-url.defaultZone=http://localhost:8761/eureka`.
+It has to be enabled on each microservice so that they become visible to Eureka. This is done inside `application.properties`.  Set the application name, e.g. in Config Client it would be `spring.application.name=client` and the Eureka port `eureka.client.service-url.defaultZone=http://localhost:8761/eureka`.
 
 ## 6. Spring Cloud API Gateway
 
