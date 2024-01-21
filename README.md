@@ -63,7 +63,7 @@ We write the CRUD Rest API.
 
 ![MVC pattern](https://i.ibb.co/pK0s6z4/mvc-drawio.png "MVC pattern")
 
-We separate databases with respect to the user profile inside `application-dev.properties` and `application-qa.properties` on GitHub.
+We separate databases with respect to the user profile inside `application-dev.properties` and `application-qa.properties`, place and link them to GitHub.
 
 We set the database the active profile of Config Client to `spring.profiles.active=dev` and the application name to `spring.application.name=client`.
 
