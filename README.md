@@ -38,10 +38,10 @@ Spring Boot is, like Spring, also based on **Inversion of Control (IoC)**, which
 Spring Boot uses additional annotations. This includes `RestController` annotation, which marks the class as a Controller, conventional URL's, along with subordinate annotations for HTTP verbs, to make it possible to handle RESTful service requests.
 
 ### Service
-A Spring boot service is defined as a class file that includes the `@Service` annotation and allows developers to add business functionalities *or* business *logic*. The annotation is used with the classes that provide these business functionalities.
+A Spring Boot service is defined as a class file that includes the `@Service` annotation and allows developers to add business functionalities *or* business *logic*. The annotation is used with the classes that provide these business functionalities.
 
 ### Controller
-The Spring boot framework is used to make the enterprise application which can be based on Groovy, Java, and Kotlin. By the use of this, we can make a web application; in order to have communication between the front and the backend, we require controllers in our applications; these controllers are responsible for handling the request from the client and providing them with the response in return.
+The Spring Boot framework is used to make the enterprise application which can be based on Groovy, Java, and Kotlin. By the use of this, we can make a web application; in order to have communication between the front and the backend, we require controllers in our applications; these controllers are responsible for handling the request from the client and providing them with the response in return.
 
 The `@RestController` annotation is mainly used to mark the controller as a basic API endpoint used to access a service. This is what we call a REST API.
 
