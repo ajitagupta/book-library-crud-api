@@ -61,7 +61,7 @@ We add the dependencies for web applications, JPA, and the database in `pom.xml`
 
 We write the CRUD Rest API.
 
-![MVC pattern](https://i.ibb.co/YpmMmyX/mvc-drawio.png "MVC pattern")
+![MVC pattern](https://i.ibb.co/pK0s6z4/mvc-drawio.png "MVC pattern")
 
 We separate databases with respect to the user profile inside `application-dev.properties` and `application-qa.properties` on GitHub.
 
