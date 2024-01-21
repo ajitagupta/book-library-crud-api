@@ -81,9 +81,11 @@ The centralized configuration works using a typical client-server architecture p
 
 ![Config Server](https://i.ibb.co/NjSLxxH/config-server.webp "Config Server")
 
-To simulate the real-world, we separate databases with respect to a user's profile inside `application-dev.properties` and `application-qa.properties`, place and link them to GitHub, using `spring.cloud.config.server.git.uri=https://github.com/ajitagupta/book-library-crud-api`.
+To simulate the real world, we separate databases with respect to a user's profile inside `application-dev.properties` and `application-qa.properties`, place and link them to GitHub (or *Cloud*, which is where Spring Cloud comes from), using `spring.cloud.config.server.git.uri=https://github.com/ajitagupta/book-library-crud-api`.
 
-We set the database the active profile of Config Client to `spring.profiles.active=dev` and the application name to `spring.application.name=client`. In Config Server, we specify the Eureka ports to `server.port=8888` and `eureka.client.service-url.defaultZone=http://localhost:8761/eureka`.
+We add database dependencies inside `pom.xml`.
+
+We set the active profile of Config Client to `spring.profiles.active=dev`.
 
 
 ## 3. Spring Cloud OpenFeign Consumer
@@ -114,7 +116,7 @@ An Eureka server is a centralized registry that knows all client applications ru
 
 Eureka is a service discovery tool supported by Spring. It enables loose coupling, i.e. two microservices don't have to talk to each other, e.g. to share under which IP and port they are available.
 
-It has to be enabled on each microservice so that they can talk to each other. This is done inside `application.properties`.
+It has to be enabled on each microservice so that they can talk to each other. This is done inside `application.properties`.  and the application name to `spring.application.name=client`. In Config Server, we specify the Eureka ports to `server.port=8888` and `eureka.client.service-url.defaultZone=http://localhost:8761/eureka`.
 
 ## 6. Spring Cloud API Gateway
 
