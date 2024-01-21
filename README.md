@@ -22,7 +22,7 @@ Each of them depend on each other, and is mandatory to make the applications run
 
 Additionally, we also need a way for calling or *consuming* our API's programmatically. We do this using Postman, which is [freely available online](https://www.postman.com/downloads/).
 
-We make use of two databases for two user profiles: Dev (H2 database, accessible over `http://localhost:portnumber/h2-console`) and QA (mySQL database, accessible over a client like SQLyog).
+We make use of two databases for two separate user profiles: Dev (H2 database, accessible over `http://localhost:portnumber/h2-console`) and QA (mySQL database, accessible over a client like SQLyog).
 
 ## 1. Config Client
 Let's analyze our first project *or* microservice.
