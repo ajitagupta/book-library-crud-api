@@ -25,9 +25,9 @@ Additionally, we also need a way for calling or *consuming* our API's programmat
 We make use of two databases for two separate user profiles: Dev (H2 database, accessible over `http://localhost:portnumber/h2-console`) and QA (mySQL database, accessible over a client like SQLyog).
 
 ## 1. Config Client
-Let's analyze our first project *or* microservice.
+Let's analyze our first project *or* microservice, the Config Client.
 
-Now, let's have a look at some more unwieldy terms to support our API, which contains a simple **CRUD (Create, Read, Update, Delete) backend for Books and Libraries**.
+We clarify some unwieldy terms to support our API, which contains a simple **CRUD (Create, Read, Update, Delete) backend for Books and Libraries**. Familiarizing yourself with these terms is very important to understand how the backend of an enterprise web application works.
 
 ### Spring Boot
 
@@ -63,7 +63,7 @@ We write the CRUD Rest API.
 
 ![MVC pattern](https://i.ibb.co/pK0s6z4/mvc-drawio.png "MVC pattern")
 
-We separate databases with respect to the user profile inside `application-dev.properties` and `application-qa.properties`, place and link them to GitHub.
+To simulate the real-world, we separate databases with respect to a user's profile inside `application-dev.properties` and `application-qa.properties`, place and link them to GitHub.
 
 We set the database the active profile of Config Client to `spring.profiles.active=dev` and the application name to `spring.application.name=client`.
 
