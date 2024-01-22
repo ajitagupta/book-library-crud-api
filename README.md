@@ -115,16 +115,16 @@ RestTemplate offers developers a high degree of flexibility and control over HTT
 
 An Eureka server is a centralized naming registry that knows all client applications running on each port and IP address. Each microservice has to register to it.
 
-Eureka is a service discovery tool supported by Spring. Two microservices will communicate by using the application name, instead of port and URL via synchronous calls (REST API's). Mark `SpringbootpracticeEurekaApplication` with `@EnableEurekaServer` and add the Netflix dependency. Define a port. Eureka is online now!
+Eureka is a service discovery tool supported by Spring. Two microservices will communicate by using the application name, instead of port and URL via synchronous REST calls.
+
+Mark `SpringbootpracticeEurekaApplication` with `@EnableEurekaServer` and add the Netflix dependency. Define a port. Eureka is online now!
 
 ![Eureka online](https://i.ibb.co/Kzf9d28/eureka-online.png "Eureka online")
 
-Eureka has to be enabled on each microservice so that it become visible to Eureka. This is done inside `application.properties` and `pom.xml`. We make the following changes to the first file and add the Eureka dependency in the second inside each microservice. Don't forget to run a `Maven -> Update Project`. Your client has been registered on Eureka now:
-```
-eureka.client.service-url.defaultZone=http://localhost:8761/eureka
-eureka.instance.prefer-ip-address=true
-spring.application.name=client
-```
+Eureka has to be enabled on each microservice so that it become visible to Eureka. This is done inside `application.properties` and `pom.xml`.
+
+Don't forget to run a `Maven -> Update Project`. Your client has been registered on Eureka now:
+
 ![Eureka client online](https://i.ibb.co/DzFpv5M/eureka-discoveryclient.png "Eureka client online")
 
 
