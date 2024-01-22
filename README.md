@@ -20,7 +20,7 @@ A microservice scales as a single entity and communicates with other microservic
 
 Each of them should be opened in an IDE like [Spring Tool Suite 4](https://spring.io/tools/).
 
-Additionally, we also need a way for calling or *consuming* our API's programmatically. We do this using Postman, which is [freely available online](https://www.postman.com/downloads/).
+Additionally, we also need a way for calling or *consuming* our API's programmatically. We do this using Postman, which is [freely available](https://www.postman.com/downloads/).
 
 We make use of two databases for two separate user profiles: Dev (H2 database, accessible over `http://localhost:portnumber/h2-console`) and QA (mySQL database, accessible over a client like SQLyog).
 
