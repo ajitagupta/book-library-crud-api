@@ -113,11 +113,11 @@ RestTemplate offers developers a high degree of flexibility and control over HTT
 
 ## 5. Pattern: Service Discovery using Eureka Server
 
-An Eureka server is a centralized registry that knows all client applications running on each port and IP address. Each microservice has to register to it.
+An Eureka server is a centralized naming registry that knows all client applications running on each port and IP address. Each microservice has to register to it.
 
-Eureka is a service discovery tool supported by Spring. It enables loose coupling, i.e. two microservices don't have to talk to each other, e.g. to share under which IP and port they are available.
+Eureka is a service discovery tool supported by Spring. Two microservices will communicate by using the application name, instead of port and URL via synchronous calls (REST API's).
 
-It has to be enabled on each microservice so that they become visible to Eureka. This is done inside `application.properties`.  Set the application name, e.g. in Config Client it would be `spring.application.name=client` and the Eureka port `eureka.client.service-url.defaultZone=http://localhost:8761/eureka`.
+Eureka has to be enabled on each microservice so that they become visible to Eureka. This is done inside `application.properties`.  Set the application name, e.g. in Config Client it would be `spring.application.name=client` and the Eureka port `eureka.client.service-url.defaultZone=http://localhost:8761/eureka`.
 
 ## 6. Spring Cloud API Gateway
 
