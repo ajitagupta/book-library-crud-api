@@ -83,7 +83,7 @@ The centralized configuration works using a typical client-server architecture p
 
 To simulate the real world, we separate databases with respect to a user's profile inside `application-dev.properties` and `application-qa.properties`, place and link them to GitHub (or *Cloud*, which is where the name Spring Cloud comes from), using `spring.cloud.config.server.git.uri=https://github.com/ajitagupta/book-library-crud-api`.
 
-We add database dependencies inside `pom.xml`.
+We add database and Spring Cloud dependencies inside `pom.xml`.
 
 We set the active profile of Config Client to `spring.profiles.active=dev`.
 
@@ -115,9 +115,18 @@ RestTemplate offers developers a high degree of flexibility and control over HTT
 
 An Eureka server is a centralized naming registry that knows all client applications running on each port and IP address. Each microservice has to register to it.
 
-Eureka is a service discovery tool supported by Spring. Two microservices will communicate by using the application name, instead of port and URL via synchronous calls (REST API's).
+Eureka is a service discovery tool supported by Spring. Two microservices will communicate by using the application name, instead of port and URL via synchronous calls (REST API's). Mark `SpringbootpracticeEurekaApplication` with `@EnableEurekaServer` and add the Netflix dependency. Define a port. Eureka is online now!
 
-Eureka has to be enabled on each microservice so that they become visible to Eureka. This is done inside `application.properties`.  Set the application name, e.g. in Config Client it would be `spring.application.name=client` and the Eureka port `eureka.client.service-url.defaultZone=http://localhost:8761/eureka`.
+![Eureka online](https://i.ibb.co/Kzf9d28/eureka-online.png "Eureka online")
+
+Eureka has to be enabled on each microservice so that it become visible to Eureka. This is done inside `application.properties` and `pom.xml`. We make the following changes to the first file and add the Eureka dependency in the second inside each microservice. Don't forget to run a `Maven -> Update Project`:
+```
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka
+eureka.instance.prefer-ip-address=true
+spring.application.name=client
+```
+![Eureka client online](https://i.ibb.co/DzFpv5M/eureka-discoveryclient.png "Eureka client online")
+
 
 ## 6. Spring Cloud API Gateway
 
