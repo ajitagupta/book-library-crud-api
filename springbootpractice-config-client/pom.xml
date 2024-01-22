@@ -46,7 +46,7 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 
-		<!--We are using Eureka Discovery that belongs to Netflix. We call cloud because it refers to everything that is not remote (server), nor local.-->
+		<!--We are using Cloud Config Server which belongs to Netflix. We call cloud because it refers to everything that is not remote (server), nor local.-->
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-config-client</artifactId>
