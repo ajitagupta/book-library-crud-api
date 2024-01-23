@@ -20,6 +20,7 @@ A **microservice** scales as a single entity and communicates with other microse
 
 While a framework like Spring boot is a set of common libraries and code, an **architecture pattern** like service discovery is a concept, or a receipt for how to get a specific problem done.
 
+### Note
 We need a way for calling or *consuming* our API's programmatically. We do this using Postman, which is [freely available](https://www.postman.com/downloads/).
 
 We make use of two databases for two separate user profiles: Dev (H2 database, accessible over `http://localhost:portnumber/h2-console`) and QA (mySQL database, accessible over a client like SQLyog).
