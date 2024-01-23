@@ -6,9 +6,7 @@ The purpose of this bootcamp is to take a deep dive into each concept, give an o
 
 As a software engineer, in most projects you work on, Spring and Spring Boot are already implemented and used vigorously. So, you must have used a bit of Spring Boot yourself and extended the API. However, getting to know its essential functionality and setup is crucial in this age of flexible, highly available distributed systems, and scalable enterprise projects.
 
-In this bootcamp we build a Book / Library CRUD API from the ground up using Spring Boot. We will also use the Spring Cloud framework to build a distributed system with a microservice architecture. We create seven Spring Boot projects or *seven microservices*. Each of these projects should be opened in an IDE like [Spring Tool Suite 4](https://spring.io/tools/).
-
-A microservice scales as a single entity and communicates with other microservices. We will take advantage of Spring Cloud (one of the most robust ways of creating microservices today) and the Service Discovery pattern to make the microservices *discoverable* to each other and work well together:
+In this bootcamp we build a Book / Library CRUD API from the ground up using Spring Boot. We will also use the Spring Cloud framework to build a distributed system with a microservice architecture. We create seven Spring Boot projects or *seven microservices*. Each of these projects should be opened in an IDE like [Spring Tool Suite 4](https://spring.io/tools/):
 
 1. [Config Client](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-config-client)
 2. [Config Server](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-config-server)
@@ -17,6 +15,8 @@ A microservice scales as a single entity and communicates with other microservic
 5. [Pattern: Service Discovery with Eureka Server](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-eureka)
 6. [Spring Cloud API Gateway](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-gateway)
 7. [Pattern: Fault Tolerance with Resilience4j Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-consumer-resilience4j)
+
+A microservice scales as a single entity and communicates with other microservices. We will take advantage of Spring Cloud (one of the most robust ways of creating microservices today) and the Service Discovery pattern to make the microservices *discoverable* to each other and work well together.
 
 While a framework is a set of common libraries and code, an architecture pattern is a concept, or a receipt for how to get a specific problem done.
 
