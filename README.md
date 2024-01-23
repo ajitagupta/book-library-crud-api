@@ -121,7 +121,7 @@ Mark `SpringbootpracticeEurekaApplication` with `@EnableEurekaServer` and add th
 
 ![Eureka online](https://i.ibb.co/Kzf9d28/eureka-online.png "Eureka online")
 
-Eureka has to be enabled on each microservice so that it becomes visible to the Eureka Server. This is done inside `application.properties` and `pom.xml`.
+Eureka has to be enabled on each microservice so that it becomes visible to the Eureka Server. This is done in each service's `application.properties` and with a new dependency in eacb `pom.xml`.
 
 Don't forget to run a `Maven -> Update Project`. Your client has been registered on Eureka now:
 
