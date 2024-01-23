@@ -20,7 +20,7 @@ In this bootcamp we build a Book / Library CRUD API from the ground up using Spr
 
 A **microservice** scales as a single entity and communicates with other microservices. We will take advantage of Spring Cloud (one of the most robust ways of creating microservices today) and the Service Discovery pattern to make the microservices *discoverable* to each other and work well together.
 
-While a framework like Spring boot is a set of common libraries and code, an **architecture pattern** like service discovery is a concept, or a receipt for how to get a specific problem done.
+While a framework like Spring boot is a set of common libraries and code, an **architecture pattern** like Service Discovery is a concept, or a receipt for how to get a specific problem done.
 
 We need a way for calling or *consuming* our API's programmatically. We do this using Postman, which is [freely available](https://www.postman.com/downloads/).
 
