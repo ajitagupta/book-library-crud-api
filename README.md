@@ -1,12 +1,12 @@
 # Book & Library CRUD API
 
-![Static Badge](https://img.shields.io/badge/Book%20&%20Library%20API-Bootcamp-blue) ![Static Badge](https://img.shields.io/badge/Spring%20Boot-Tutorial-green) ![Static Badge](https://img.shields.io/badge/Microservices-Tutorial-green) ![Static Badge](https://img.shields.io/badge/Spring%20Cloud-Tutorial-green)
+![Static Badge](https://img.shields.io/badge/Book%20&%20Library%20API-Bootcamp-blue) ![Static Badge](https://img.shields.io/badge/Spring%20Boot-Tutorial-green) ![Static Badge](https://img.shields.io/badge/Microservices-Tutorial-green) ![Static Badge](https://img.shields.io/badge/Spring%20Cloud-Tutorial-green) ![Static Badge](https://img.shields.io/badge/Architecture%20Patterns-Tutorial-green)
 
 The purpose of this bootcamp is to take a deep dive into each concept, give an overview, and explain the foundational ideas behind Springboot and microservice architecture.
 
 As a software engineer, in most projects you work on, Spring and Spring Boot are already implemented and used vigorously. So, you must have used a bit of Spring Boot yourself and extended the API. However, getting to know its essential functionality and setup is crucial in this age of flexible, highly available distributed systems, and scalable enterprise projects.
 
-In this bootcamp we build a Book / Library CRUD API from the ground up using Spring Boot. We will also use the Spring Cloud framework to build a distributed system with a microservice architecture. We create seven Spring Boot projects or *seven microservices*.
+In this bootcamp we build a Book / Library CRUD API from the ground up using Spring Boot. We will also use the Spring Cloud framework to build a distributed system with a microservice architecture. We create seven Spring Boot projects or *seven microservices*. Each of these projects should be opened in an IDE like [Spring Tool Suite 4](https://spring.io/tools/).
 
 A microservice scales as a single entity and communicates with other microservices. We will take advantage of Spring Cloud (one of the most robust ways of creating microservices today) and the Service Discovery pattern to make the microservices *discoverable* to each other and work well together:
 
@@ -18,9 +18,9 @@ A microservice scales as a single entity and communicates with other microservic
 6. [Spring Cloud API Gateway](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-gateway)
 7. [Pattern: Fault Tolerance with Resilience4j Consumer](https://github.com/ajitagupta/book-library-api/tree/main/springbootpractice-consumer-resilience4j)
 
-Each of these projects should be opened in an IDE like [Spring Tool Suite 4](https://spring.io/tools/).
+While a framework is a set of common libraries and code, an architecture pattern is a concept, or a receipt for how to get a specific problem done.
 
-We also need a way for calling or *consuming* our API's programmatically. We do this using Postman, which is [freely available](https://www.postman.com/downloads/).
+We need a way for calling or *consuming* our API's programmatically. We do this using Postman, which is [freely available](https://www.postman.com/downloads/).
 
 We make use of two databases for two separate user profiles: Dev (H2 database, accessible over `http://localhost:portnumber/h2-console`) and QA (mySQL database, accessible over a client like SQLyog).
 
