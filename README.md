@@ -96,11 +96,11 @@ Later, the discovery server will come into the picture.
 
 The Feign Consumer doesn't add new functionality. It simply *consumes* our CRUD API without exposing it to the outside world.
 
-The Feign Consumer is a special type of consumer in the sense that there is need to write any implementation to call the RESTful services. We use the code already written.
+The Feign Consumer is a special type of consumer in the sense that there is need to write any implementation to call the RESTful services. We use the code already written (inside Config Client).
 
 All we need is the additional `@EnableFeignClients`annotation, a new dependency, and a Feign interface, where we declare all the REST API's to be called. This is called a *declarative* approach.
 
-Feign allows you to abstract the mechanics of calling a REST service. Once you configure and annotate the Feign interface, you can call your REST service by making a simple Java function call from your controller. The actual implementation of making a REST call is handled at runtime by Feign. This means that the implementation can be configured without changing your business logic code (inside Config Client).
+Feign allows to abstract the mechanics of calling a REST service. Once you configure and annotate the Feign interface, you can call your REST service by making a simple Java function call from your controller. The actual implementation of making a REST call is handled at runtime by Feign.
 
 
 ## 4. RestTemplate Consumer
