@@ -65,7 +65,6 @@ We write the CRUD Rest API.
 
 ![MVC pattern](https://i.ibb.co/pK0s6z4/mvc-drawio.png "MVC pattern")
 
-![MVC pattern](https://i.ibb.co/MRyHwvk/mvc-drawio.png "MVC pattern")
 
 ## 2. Config Server
 
