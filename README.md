@@ -106,15 +106,18 @@ With this declarative approach Feign abstracts the mechanics of calling a REST s
 Just make sure your controller path names are precise and synonymous, e.g. we use `/h1`, `/h2`, and `/h3` instead of `/books` and `/libaries`.
 
 
+
 ## 4. RestTemplate Consumer
 
-The RestTemplate doesn't add new functionality either. It also simply consumer our CRUD API using the class `RestTemplate`.
+The RestTemplate doesn't add new functionality either. It also simply consumes our CRUD API using the class `RestTemplate`.
 
 Spring RestTemplate class is part of Spring Web, introduced in Spring 3. RestTemplate class provides overloaded methods for different HTTP methods, such as GET, POST, PUT, DELETE etc.
 
-When we use the RestTemplate to call the RESTful service, it creates duplication of code that talks to RESTful services. When we define Feign, we need only to define a proxy and define a single method into it. Feign helps us to simplify client code to talk to the RESTful web services.
+When we use the RestTemplate to call the RESTful service, it creates duplication of code that talks to RESTful services.
 
 RestTemplate offers developers a high degree of flexibility and control over HTTP requests, which is advantageous in intricate scenarios.
+
+
 
 ## 5. Pattern: Service Discovery using Eureka Server
 
