@@ -137,14 +137,13 @@ Don't forget to run a `Maven -> Update Project`. Your client has been registered
 
 This is a NO-JAVA project.
 
-The gateway microservice contains a routing table that points to microservice aliases registered in Eureka, instead of physical addresses. This gives us a full solution based on an API gateway, service discovery, and 
-load balancing.
+The gateway microservice contains a routing table that points to microservice aliases registered with `spring.application.name` in Eureka, instead of physical addresses.
 
 With the help of an API gateway we can keep microservices unaware of the location  of a given functionality. No matter if we're splitting a  monolith or we decide to move some functionality to a different microservice, we can have all the other microservices working without any impact if they always pass through the API gateway. We get even looser coupling between our microservices. In addition, this edge service adds load balancing to our infrastructure.
 
-After adding a dependency in `pom.xml` and several routing entries to `application.properties` we can access our CRUD API via `http://localhost:8099/client/library/22`.
+After adding another dependency in `pom.xml` (please remove the `-mvc` at the end of the `artifactId`) and several routing entries to `application.properties` we can access our GET API via `http://localhost:8099/consumer-feign/library/22`, for instance.
 
-Now start the gateway, the Eureka server, the config server, the config client, and the two other applications, in the respective order.
+Start the Eureka Server, the API Gateway and the Config Client, in the respective order.
 
 
 ## 7. Pattern: Fault Tolerance with Resilience4j Consumer
