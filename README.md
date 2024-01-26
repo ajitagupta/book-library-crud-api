@@ -130,7 +130,7 @@ Mark `SpringbootpracticeEurekaApplication` with `@EnableEurekaServer` and add th
 
 ![Eureka online](https://i.ibb.co/Kzf9d28/eureka-online.png "Eureka online")
 
-Eureka has to be enabled on each microservice so that it becomes visible to the Eureka Server. This is done in each service's `application.properties` and with a new dependency in eacb `pom.xml`.
+Eureka has to be enabled on each microservice so that it becomes visible to the Eureka Server. This is done in each service's `application.properties` and with a new dependency in each `pom.xml`.
 
 ### Note
 
@@ -147,9 +147,11 @@ The gateway microservice contains a routing table that points to microservice al
 
 With the help of an API gateway we can keep microservices unaware of the location  of a given functionality. No matter if we're splitting a  monolith or we decide to move some functionality to a different microservice, we can have all the other microservices working without any impact if they always pass through the API gateway. We get even looser coupling between our microservices. In addition, this edge service adds load balancing to our infrastructure.
 
-After adding another dependency in `pom.xml` (please remove the `-mvc` at the end of the `artifactId`) and several routing entries to `application.properties` we can access our GET API via `http://localhost:8099/consumer-feign/library/22`, for instance.
+After adding another dependency in `pom.xml` and several routing entries to `application.properties` we can access our GET API via `http://localhost:8099/consumer-feign/library/22`, for instance.
 
 ### Note
+Please remove the `-mvc` at the end of the `artifactId` in the new dependency.
+
 Start the Eureka Server, the Config Client, the OpenFeign Consumer, and the API Gateway, in the respective order.
 
 
