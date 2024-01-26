@@ -132,11 +132,14 @@ Mark `SpringbootpracticeEurekaApplication` with `@EnableEurekaServer` and add th
 
 Eureka has to be enabled on each microservice so that it becomes visible to the Eureka Server. This is done in each service's `application.properties` and with a new dependency in each `pom.xml`.
 
-### Note
-
-Don't forget to run a `Maven -> Update Project`. Your client has been registered on Eureka now:
+Your client has been registered on Eureka now:
 
 ![Eureka client online](https://i.ibb.co/DzFpv5M/eureka-discoveryclient.png "Eureka client online")
+
+### Note
+
+Don't forget to run a `Maven -> Update Project`.
+
 
 
 ## 6. Spring Cloud API Gateway
