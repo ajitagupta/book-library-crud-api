@@ -103,7 +103,8 @@ All we need is the additional `@EnableFeignClients`annotation, a new dependency,
 
 With this declarative approach Feign abstracts the mechanics of calling a REST service. Once you configure and annotate the Feign interface, you can call your REST service by making a simple Java function call from your controller. The actual implementation of making a REST call is handled at runtime by Feign.
 
-Just make sure your controller path names are precise and synonymous, e.g. we use `/h1`, `/h2`, and `/h3` instead of `/books` and `/libaries`.
+### Note
+Make sure your controller path names are precise and synonymous, e.g. we use `/h1`, `/h2`, and `/h3` instead of `/books` and `/libaries`.
 
 
 
@@ -131,6 +132,8 @@ Mark `SpringbootpracticeEurekaApplication` with `@EnableEurekaServer` and add th
 
 Eureka has to be enabled on each microservice so that it becomes visible to the Eureka Server. This is done in each service's `application.properties` and with a new dependency in eacb `pom.xml`.
 
+### Note
+
 Don't forget to run a `Maven -> Update Project`. Your client has been registered on Eureka now:
 
 ![Eureka client online](https://i.ibb.co/DzFpv5M/eureka-discoveryclient.png "Eureka client online")
@@ -146,6 +149,7 @@ With the help of an API gateway we can keep microservices unaware of the locatio
 
 After adding another dependency in `pom.xml` (please remove the `-mvc` at the end of the `artifactId`) and several routing entries to `application.properties` we can access our GET API via `http://localhost:8099/consumer-feign/library/22`, for instance.
 
+### Note
 Start the Eureka Server, the Config Client, the OpenFeign Consumer, and the API Gateway, in the respective order.
 
 
