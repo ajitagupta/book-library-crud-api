@@ -146,7 +146,7 @@ With the help of an API gateway we can keep microservices unaware of the locatio
 
 After adding another dependency in `pom.xml` (please remove the `-mvc` at the end of the `artifactId`) and several routing entries to `application.properties` we can access our GET API via `http://localhost:8099/consumer-feign/library/22`, for instance.
 
-Start the Eureka Server, the API Gateway and the Config Client, in the respective order.
+Start the Eureka Server, the Config Client, the OpenFeign Consumer, and the API Gateway, in the respective order.
 
 
 ## 7. Pattern: Fault Tolerance with Resilience4j Consumer
