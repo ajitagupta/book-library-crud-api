@@ -154,6 +154,8 @@ Please remove the `-mvc` at the end of the `artifactId` in the new dependency.
 
 Start the Eureka Server, the Config Client, the OpenFeign Consumer, and the API Gateway, in the respective order.
 
+This gateway is compatible with the latest Spring Boot versions. In software environments which are not completely up-to-date try Zuul.
+
 
 ## 7. Pattern: Fault Tolerance with Resilience4j Consumer
 In microservices, an application or service makes a lot of remote calls to applications running in different services, usually on different machines across a network. If there are many callers to an unresponsive service, you can run out of critical resources leading to cascading failures across multiple systems.
