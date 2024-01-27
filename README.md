@@ -157,7 +157,7 @@ Please remove the `-mvc` at the end of the `artifactId` in the new dependency.
 
 Start the Eureka Server, the Config Client, the OpenFeign Consumer, and the API Gateway, in the respective order.
 
-This gateway is compatible with the latest Spring Boot versions. In software environments which are not completely up-to-date try Zuul.
+This gateway is compatible with the latest Spring Boot versions. In software environments, which are not completely up-to-date, you can use Zuul instead.
 
 
 ## 7. Pattern: Fault Tolerance with Resilience4j Consumer
