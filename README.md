@@ -4,7 +4,7 @@
 
 The purpose of this bootcamp is to take a deep dive into each concept, give an overview, and explain the foundational ideas behind Springboot and microservice architecture.
 
-As a software engineer, in most projects you work on, Spring and Spring Boot are already implemented and used vigorously. So, you must have used a bit of Spring Boot yourself and extended the API. However, getting to know its essential functionality and setup is crucial in this age of flexible, highly available distributed systems, and scalable enterprise projects.
+As a software engineer, in most projects you work on, Spring and Spring Boot are already implemented and used vigorously. However, getting to know its essential functionality and setup is crucial in this age of flexible, highly available distributed systems, and scalable enterprise projects.
 
 In this bootcamp we build a Book / Library CRUD API from the ground up using Spring Boot. We will also use the Spring Cloud framework to build a distributed system with a microservice architecture. We create seven Spring Boot projects or *seven microservices*. Each of these projects can be opened in an IDE like [Spring Tool Suite 4](https://spring.io/tools/):
 
@@ -103,18 +103,22 @@ All we need is the additional `@EnableFeignClients`annotation, a new dependency,
 
 With this declarative approach Feign abstracts the mechanics of calling a REST service. Once you configure and annotate the Feign interface, you can call your REST service by making a simple Java function call from your controller. The actual implementation of making a REST call is handled at runtime by Feign.
 
-Just make sure your controller path names are precise and synonymous, e.g. we use `/h1`, `/h2`, and `/h3` instead of `/books` and `/libaries`.
+### Note
+Make sure your controller path names are precise and synonymous, e.g. we use `/h1`, `/h2`, and `/h3` instead of `/books` and `/libaries`.
+
 
 
 ## 4. RestTemplate Consumer
 
-The RestTemplate doesn't add new functionality either. It also simply consumer our CRUD API using the class `RestTemplate`.
+The RestTemplate doesn't add new functionality either. It also simply consumes our CRUD API using the class `RestTemplate`.
 
 Spring RestTemplate class is part of Spring Web, introduced in Spring 3. RestTemplate class provides overloaded methods for different HTTP methods, such as GET, POST, PUT, DELETE etc.
 
-When we use the RestTemplate to call the RESTful service, it creates duplication of code that talks to RESTful services. When we define Feign, we need only to define a proxy and define a single method into it. Feign helps us to simplify client code to talk to the RESTful web services.
+When we use the RestTemplate to call the RESTful service, it creates duplication of code that talks to RESTful services.
 
 RestTemplate offers developers a high degree of flexibility and control over HTTP requests, which is advantageous in intricate scenarios.
+
+
 
 ## 5. Pattern: Service Discovery using Eureka Server
 
@@ -126,11 +130,16 @@ Mark `SpringbootpracticeEurekaApplication` with `@EnableEurekaServer` and add th
 
 ![Eureka online](https://i.ibb.co/Kzf9d28/eureka-online.png "Eureka online")
 
-Eureka has to be enabled on each microservice so that it becomes visible to the Eureka Server. This is done in each service's `application.properties` and with a new dependency in eacb `pom.xml`.
+Eureka has to be enabled on each microservice so that it becomes visible to the Eureka Server. This is done in each service's `application.properties` and with a new dependency in each `pom.xml`.
 
-Don't forget to run a `Maven -> Update Project`. Your client has been registered on Eureka now:
+Your client has been registered on Eureka now:
 
 ![Eureka client online](https://i.ibb.co/DzFpv5M/eureka-discoveryclient.png "Eureka client online")
+
+### Note
+
+Don't forget to run a `Maven -> Update Project`.
+
 
 
 ## 6. Spring Cloud API Gateway
@@ -141,9 +150,14 @@ The gateway microservice contains a routing table that points to microservice al
 
 With the help of an API gateway we can keep microservices unaware of the location  of a given functionality. No matter if we're splitting a  monolith or we decide to move some functionality to a different microservice, we can have all the other microservices working without any impact if they always pass through the API gateway. We get even looser coupling between our microservices. In addition, this edge service adds load balancing to our infrastructure.
 
-After adding another dependency in `pom.xml` (please remove the `-mvc` at the end of the `artifactId`) and several routing entries to `application.properties` we can access our GET API via `http://localhost:8099/consumer-feign/library/22`, for instance.
+After adding another dependency in `pom.xml` and several routing entries to `application.properties` we can access our GET API via `http://localhost:8099/consumer-feign/library/22`, for instance.
 
-Start the Eureka Server, the API Gateway and the Config Client, in the respective order.
+### Note
+Please remove the `-mvc` at the end of the `artifactId` in the new dependency.
+
+Start the Eureka Server, the Config Client, the OpenFeign Consumer, and the API Gateway, in the respective order.
+
+This gateway is compatible with the latest Spring Boot versions. In software environments which are not completely up-to-date try Zuul.
 
 
 ## 7. Pattern: Fault Tolerance with Resilience4j Consumer
