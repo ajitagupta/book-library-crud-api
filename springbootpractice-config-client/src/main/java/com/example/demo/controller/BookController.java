@@ -63,6 +63,8 @@ public class BookController {
 	@GetMapping
 	// http://localhost:8888/books?year=1999 for books in specific year or
 	// http://localhost:8888/books for getting all books
+	// RequestParam is for filtering, and to shorten the URL, and for optional parameters
+	// PathVariable are mandatory to pass, they change URL design because they are part of the URL
 	public List<Book> getAllBooks(@RequestParam(required = false) Integer year)	{
 		if(year == null)
 		  return bookService.findAllBooks();

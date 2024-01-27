@@ -41,6 +41,7 @@ public class HomeController {
 	public ResponseEntity<Response> hello3(){
 	Response response = new Response("1", "name", "address", 1234567);
 	return new ResponseEntity<Response>(response, HttpStatus.ACCEPTED); //202
+																		// ResponseEntity used if special error code should be shown, or additional headers
 	}
 	
 	@PostMapping("/h3")
