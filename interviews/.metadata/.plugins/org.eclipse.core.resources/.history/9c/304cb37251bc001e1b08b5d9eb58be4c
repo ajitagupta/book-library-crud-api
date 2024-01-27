@@ -1,0 +1,9 @@
+
+# Zuul Configuration
+zuul.routes.api1.path=/api1/**
+zuul.routes.api1.url=http://localhost:8081
+
+server.port=8887
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka
+eureka.instance.prefer-ip-address=true
+spring.application.name=zuul-api-gateway

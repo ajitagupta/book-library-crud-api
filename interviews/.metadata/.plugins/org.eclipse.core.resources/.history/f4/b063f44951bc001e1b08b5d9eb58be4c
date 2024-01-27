@@ -1,0 +1,5 @@
+
+# Zuul Configuration
+zuul.routes.api1.path=/api1/**
+zuul.routes.api1.url=http://localhost:8081
+

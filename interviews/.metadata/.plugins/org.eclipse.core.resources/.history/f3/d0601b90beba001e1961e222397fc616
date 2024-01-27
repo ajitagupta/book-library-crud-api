@@ -1,0 +1,6 @@
+package com.interviews.openfeignconsumer.openfeign;
+
+@FeignClient("client")
+public interface ProductFeign {
+
+}

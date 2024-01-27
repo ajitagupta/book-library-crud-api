@@ -1,0 +1,21 @@
+package com.interviews.openfeignconsumer.openfeign;
+
+import java.util.List;
+
+import org.springframework.cloud.openfeign.FeignClient;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.interviews.openfeignconsumer.model.Product;
+
+@FeignClient("client")
+public interface ProductFeign {
+
+	
+	@GetMapping("/products")
+	public List<Product> getAllProducts();
+
+	@PostMapping("/products")
+	public Product createProduct(Product requestBody);
+	
+}

@@ -1,0 +1,14 @@
+server.port=8800
+
+eureka.client.service-url.defaultZone=http://localhost:8761/eureka
+eureka.instance.prefer-ip-address=true
+spring.application.name=api-gateway
+
+spring.cloud.gateway.discovery.locator.enabled=true
+spring.cloud.gateway.discovery.locator.lower-case-service-id=true
+
+# new entries for API Gateway
+	
+spring.cloud.gateway.routes[0].id=booklibraryService		# arbitrary, set it to what you like
+spring.cloud.gateway.routes[0].uri=lb://openfeign-consumer	# must be included in Postman, lb stands for Eureka's load balancing mechanism
+spring.cloud.gateway.routes[0].predicates[0]=Path=/output/**# must be included in Postman
