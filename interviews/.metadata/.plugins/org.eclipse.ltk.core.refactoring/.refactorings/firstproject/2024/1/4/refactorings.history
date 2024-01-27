@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;Product.java&apos; to &apos;openfeign-consumer/src/main/java/com.interviews.openfeignconsumer.model&apos;&#x0D;&#x0A;- Original project: &apos;firstproject&apos;&#x0D;&#x0A;- Destination element: &apos;openfeign-consumer/src/main/java/com.interviews.openfeignconsumer.model&apos;&#x0D;&#x0A;- Original element: &apos;com.interviews.firstproject.model.Product.java&apos;" description="Copy compilation unit" destination="=openfeign-consumer/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.interviews.openfeignconsumer.model" element1="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;com.interviews.firstproject.model{Product.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1706103473485" units="1" version="1.0"/>
-</session>

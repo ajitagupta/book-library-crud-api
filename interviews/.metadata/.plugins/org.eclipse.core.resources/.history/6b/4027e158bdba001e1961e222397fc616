@@ -1,5 +1,0 @@
-package com.interviews.openfeignconsumer.controller;
-
-public class ProductController {
-
-}
