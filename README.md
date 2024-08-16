@@ -1,6 +1,6 @@
 # Book & Library CRUD API
 
-![Static Badge](https://img.shields.io/badge/Book%20&%20Library%20API-Bootcamp-blue) ![Static Badge](https://img.shields.io/badge/Spring-green) ![Static Badge](https://img.shields.io/badge/Microservices-green)
+![Static Badge](https://img.shields.io/badge/Book%20&%20Library%20API-Bootcamp-blue)
 
 The purpose of this bootcamp is to take a deep dive into each concept, give an overview, and explain the foundational ideas behind Springboot and microservice architecture.
 
